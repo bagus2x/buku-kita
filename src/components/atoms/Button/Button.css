@@ -17,6 +17,9 @@
     overflow: hidden;
     cursor: pointer;
 }
+.btn::-moz-focus-inner {
+    border: 0;
+}
 .btn:after {
     background: rgb(255, 255, 255, 0.4);
     content: "";
