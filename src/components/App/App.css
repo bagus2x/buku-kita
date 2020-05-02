@@ -1,0 +1,39 @@
+:root {
+    --primary-light:#4791db;
+    --primary-main:#1976d2;
+    --primary-dark:#115293;
+    --secondary-light:#e33371;
+    --secondary-main:#dc004e;
+    --secondary-dark:#9a0036;
+    --error-light:#e57373;
+    --error-main:#f44336;
+    --error-dark:#d32f2f;
+    --warning-light:#ffb74d;
+    --warning-main:#ff9800;
+    --warning-dark:#f57c00;
+    --info-light:#64b5f6;
+    --info-main:#2196f3;
+    --info-dark:#1976d2;
+    --success-light:#81c784;
+    --success-main:#4caf50;
+    --success-dark:#388e3c;
+    
+    --text-primary:rgba(0, 0, 0, 0.87);
+    --text-secondary:rgba(0, 0, 0, 0.54);
+    --text-disabled:rgba(0, 0, 0, 0.38);
+    --action-active:rgba(0, 0, 0, 0.54);
+    --action-hover:rgba(0, 0, 0, 0.04);
+    --action-selected:rgba(0, 0, 0, 0.08);
+    --action-disabled:rgba(0, 0, 0, 0.26);
+    --action-disabledBackground:rgba(0, 0, 0, 0.12);
+    --background-default: #303030;
+    --background-paper:#424242;
+    --divider:rgba(0, 0, 0, 0.12);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    border: none;
+    list-style: none;
+}
