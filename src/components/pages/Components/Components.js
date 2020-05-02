@@ -22,6 +22,9 @@ const Components = () => {
             <Button variant="danger">
                 DANGER
             </Button>
+            <Button variant="link">
+                LINK
+            </Button>
 
             <hr/>
 
