@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom';
 
 const Button = (props) => {
     
-    const { variant, disabled, onClick, children } = props;
+    const { variant, disabled, onClick, children, to } = props;
 
     return ( 
-        variant === 'link' ? <Link className="btn-link">{ children }</Link>
+        variant === 'link' ? <Link to={ to } className="btn-link">{ children }</Link>
                                         :
                             <button
                                 className={`btn${ variant ? ' ' + variant: '' }`}
