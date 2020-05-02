@@ -38,6 +38,7 @@
     font-family: 'Lato', sans-serif;
     color: var(--text-primary);
     font-weight: 500;
+    outline: 0;
 }
 
 hr {
