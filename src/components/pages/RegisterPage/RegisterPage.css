@@ -1,0 +1,24 @@
+#register-page {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--default-main);
+}
+#register-page .form-group {
+    display: flex;
+    flex-direction: column;
+    width: 768px;
+    max-width: 80%;
+    height: 400px;
+    background-color: var(--white);
+    border-radius: 4px;
+    padding: 5px;
+    box-shadow: var(--primary-shadow);
+}
+#register-page .form-group input {
+    background-color: var(--white);
+}
+
+
