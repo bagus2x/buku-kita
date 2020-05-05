@@ -3,19 +3,11 @@ import './Input.css';
 
 const Input = (props) => {
     
-    const { variant, disabled, onClick, children, className, name, id, placeholder, type } = props;
+    const { variant, children, className } = props;
 
-    return (
-        <input
-            className={`inp${ variant ? ' ' + variant: '' }${ className ? ' ' + className : ''}`}
-            onClick={ onClick }
-            disabled={ disabled }
-            name={ name }
-            id={ id }
-            placeholder={ placeholder }
-            type={ type }
-        >{ children }</input>
-    )
+    return React.createElement('input', {...props, 
+        className: `inp${ variant ? ' ' + variant: '' }${ className ? ' ' + className : ''}`
+    }, children)
 }
 
 export const Label = (props) => {
@@ -31,5 +23,4 @@ export const Label = (props) => {
         </div>
     )
 }
-
 export default Input;
