@@ -14,15 +14,17 @@
 #landing-page > #top-nav {
     grid-area: hd;
     height: 80px;
-    box-shadow:  0px 0px 20px rgba(0, 0, 0, 0.25);
 }
 #landing-page .left-wrapper {
     display: flex;
     align-items: center;
 }
-#landing-page .button-wrapper {
+#landing-page .auth-link {
     display: flex;
-    align-items: center;
+    flex-direction: row;
+}
+#landing-page .auth-link span {
+    font-weight: bold;
 }
 #landing-page .product-wrapper {
     display: flex;
@@ -92,11 +94,9 @@
     #landing-page #top-nav .lp-menu {
         display: flex;
     }
-    #landing-page .button-wrapper {
-        display: flex;
+    #landing-page .auth-link {
         flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
+        width: 100%;
     }
     #landing-page > .greeting {
         display: flex;
@@ -128,11 +128,11 @@
         background-color: transparent;
         flex-direction: row;
     }
-    #landing-page #top-nav .list-header .list-item:hover {
+    /* #landing-page #top-nav .list-header .list-item:hover {
         cursor: default;
         background-color: transparent;
     }
     #landing-page #top-nav .list-header .list-item::after {
         background-color: transparent;
-    }
+    } */
 }

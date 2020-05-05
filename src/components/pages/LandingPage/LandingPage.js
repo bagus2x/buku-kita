@@ -38,10 +38,10 @@ const LandingPage = () => {
         </List>
     );
     const buttonWrapper = (
-        <div className="button-wrapper">
-            <Button style={{width: '100%', margin: '0'}} to="register" variant="primary">Daftar</Button>
-            <Button style={{width: '100%', margin: '10px 0'}}to="login" variant="link">Masuk</Button>
-        </div>
+        <List className="auth-link" expand >
+            <Item ><span>Daftar</span></Item>
+            <Item >Masuk</Item>
+        </List>
     );
 
     return (
@@ -59,6 +59,7 @@ const LandingPage = () => {
                     </Button>
                     <Content className="lp-content" >
                         { width <= 576 ? productList : null }
+                        { width <= 576 ? <hr style={{margin: '-10px 0', width: '100%'}} /> : null }
                         { width <= 768 ? buttonWrapper : null }
                     </Content>
                 </Menu>

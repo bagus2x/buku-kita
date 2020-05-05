@@ -30,7 +30,7 @@
     border: 1px solid var(--default-dark);
     padding: 10px 5px;
     box-sizing: border-box;
-    border-radius: 4px;
+    border-radius: 18px;
 }
 .inp.full-border:focus {
     border-width: 2px;
