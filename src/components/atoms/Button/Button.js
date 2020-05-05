@@ -4,15 +4,17 @@ import { Link } from 'react-router-dom';
 
 const Button = (props) => {
     
-    const { variant, disabled, onClick, children, to } = props;
+    const { variant, disabled, onClick, children, to, className, onMouseOver, style } = props;
 
     return ( 
-        variant === 'link' ? <Link to={ to } className="btn-link">{ children }</Link>
+        variant === 'link' ? <Link style={style} to={ to } className="btn btn-link">{ children }</Link>
                                         :
                             <button
-                                className={`btn${ variant ? ' ' + variant: '' }`}
+                                className={`btn${ variant ? ' ' + variant: '' }${ className ? ' ' + className: '' }`}
                                 onClick={ onClick }
                                 disabled={ disabled }
+                                onMouseOver={ onMouseOver }
+                                style={ style }
                             >{ children }</button>
     )
 }

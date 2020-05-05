@@ -1,0 +1,138 @@
+#landing-page {
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns:repeat(12, 1fr);
+    grid-template-rows: 80px calc(100vh - 80px);
+    grid-template-areas:
+                        "hd hd hd hd hd hd hd hd hd hd hd hd"
+                        "gr gr gr gr gr gr wp wp wp wp wp wp";
+    align-content: stretch;
+    box-sizing: border-box;
+}
+#landing-page > #top-nav {
+    grid-area: hd;
+    height: 80px;
+    box-shadow:  0px 0px 20px rgba(0, 0, 0, 0.25);
+}
+#landing-page .left-wrapper {
+    display: flex;
+    align-items: center;
+}
+#landing-page .button-wrapper {
+    display: flex;
+    align-items: center;
+}
+#landing-page .product-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#landing-page .product-wrapper li {
+    margin: 0 20px;
+}
+#landing-page #top-nav .toggle {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    box-shadow: none;
+    justify-content: center;
+    padding: 5px;
+    width: 50px;
+}
+#landing-page #top-nav .lp-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 200px;
+    right: -10px;
+    padding: 20px 0;
+}
+#landing-page #top-nav .lp-menu {
+    display: none;
+}
+#landing-page #top-nav .toggle:hover {
+    background-color: var(--default-light);
+}
+#landing-page > .greeting {
+    display: flex;
+    padding: 0 40px;
+    flex-direction: column;
+    grid-area: gr;
+    align-self: center;
+}
+#landing-page > .greeting button {
+    margin-top: 20px;
+    width: fit-content;
+}
+#landing-page > .greeting h1 {
+    font-weight: 500;
+}
+#landing-page > .wallpaper {
+    align-self: center;
+    grid-area: wp;
+    justify-content: center;
+    padding: 0 40px;
+}
+.svg-wallpaper {
+    width: 100%;
+    max-width: 840px;
+    min-width: 300px;
+}
+@media screen and (max-width: 768px) {
+    #landing-page {
+        grid-template-columns:repeat(6, 1fr);
+        grid-template-rows: 80px repeat(2, calc((100vh - 80px) / 2));
+        grid-template-areas:
+                            "hd hd hd hd hd hd"
+                            "wp wp wp wp wp wp"
+                            "gr gr gr gr gr gr";
+    }
+    #landing-page #top-nav .lp-menu {
+        display: flex;
+    }
+    #landing-page .button-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    #landing-page > .greeting {
+        display: flex;
+    }
+    #landing-page > .wallpaper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* padding: 0 40px; */
+    }
+    #landing-page .svg-wallpaper {
+        width: 60%;
+    }
+
+}
+@media screen and (max-width: 576px) {
+    #landing-page #top-nav .lp-menu {
+        display: flex;        
+    }
+    #landing-page .product-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+}
+@media screen and (min-width: 577px) {
+    #landing-page #top-nav .list-header {
+        background-color: transparent;
+        flex-direction: row;
+    }
+    #landing-page #top-nav .list-header .list-item:hover {
+        cursor: default;
+        background-color: transparent;
+    }
+    #landing-page #top-nav .list-header .list-item::after {
+        background-color: transparent;
+    }
+}
