@@ -10,13 +10,11 @@ export const Content = React.forwardRef( (props, ref) => {
             { props.children }
         </div>
     )
-
 });
 
 function Menu (props) {
 
     const contentRef = useRef(null);
-    const menuRef = useRef(null);
 
     const { children, className, id} = props;
     const [isOpen, setOpen] = useState(false);
@@ -25,36 +23,24 @@ function Menu (props) {
     Menu._onSelect = () => setOpen(false);
 
     const handleClickItems = () => {
+
         if(contentRef.current) {
             [].slice.call(contentRef.current.children).forEach((e) => {
                 e.addEventListener('click', () => {
-                    setTimeout(() => {
-                        setOpen(false)
-                    }, 200);
+                    setTimeout(() =>setOpen(false) , 200);
                 })
-            })
+            });
         }
     }
-    useEffect(() => {        
-        menuRef.current.addEventListener('mouseover', handleClickItems)
-        return () => {
-            menuRef.current.removeEventListener('mouseover', handleClickItems)
-        }
-    }, [])
+
+    useEffect(() => { if(contentRef.current) return handleClickItems()});
 
     return(
-            <div ref={ menuRef } className={`menu${ className ? ' '+ className : ''}`}>
+            <div className={`menu${ className ? ' '+ className : ''}`}>
                 { React.cloneElement(children[0], {onClick: () => setOpen(!isOpen)}) }
                 { isOpen ? React.cloneElement(children[1], {ref: contentRef}) : null }
             </div>
     )
-}
-
-export function OnSelect (props) {
-
-    const { el } = props;
-
-    return React.cloneElement(el, {_onSelect: null})
 }
 
 Menu.propTypes = {
