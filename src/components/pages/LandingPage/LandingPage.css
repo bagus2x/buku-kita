@@ -146,3 +146,20 @@
         flex-direction: row;
     }
 }
+
+/* Landscape orientation */
+@media screen and (max-width: 768px) and (orientation: landscape) {
+    #landing-page #top-nav .lp-menu {
+        display: flex;
+    }
+    #landing-page #top-nav .auth-link {
+        display: flex;
+        flex-direction: column;
+    }
+    #landing-page > .greeting h1 {
+        font-size: 1.5rem;
+    }
+    #landing-page > .greeting p {
+        font-size: 0.75rem;
+    }
+}
