@@ -1,15 +1,15 @@
 #landing-page {
-    overflow: hidden;
     width: 100vw;
-    height: 100vh;
+    height: auto;
     display: grid;
     grid-template-columns:repeat(12, 1fr);
-    grid-template-rows: 80px calc(100vh - 80px);
+    grid-template-rows: 80px auto;
     grid-template-areas:
                         "hd hd hd hd hd hd hd hd hd hd hd hd"
                         "gr gr gr gr gr gr wp wp wp wp wp wp";
     align-content: stretch;
     box-sizing: border-box;
+    align-items: center;
 }
 #landing-page > #top-nav {
     grid-area: hd;
@@ -71,6 +71,7 @@
     justify-content: center;
     background-repeat: no-repeat;
     background-size: 100% 100%;
+    height: calc(100vh - 80px);
 }
 #landing-page > .greeting button {
     margin-top: 20px;
@@ -83,19 +84,22 @@
 }
 #landing-page > .wallpaper {
     align-self: center;
+    display: flex;
+    align-items: center;
     grid-area: wp;
     justify-content: center;
     padding: 0 40px;
+    overflow: hidden;
+    height: calc(100vh - 80px);
 }
 #landing-page .svg-wallpaper {
     width: 100%;
-    max-width: 840px;
     min-width: 300px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) and (orientation: portrait) {
     #landing-page {
         grid-template-columns:repeat(6, 1fr);
-        grid-template-rows: 80px repeat(2, calc((100vh - 80px) / 2));
+        grid-template-rows: 80px repeat(2, auto);
         grid-template-areas:
                             "hd hd hd hd hd hd"
                             "wp wp wp wp wp wp"
@@ -110,12 +114,13 @@
     }
     #landing-page > .greeting {
         display: flex;
+        height: calc((100vh - 80px) / 2);
     }
     #landing-page > .wallpaper {
         display: flex;
         justify-content: center;
         align-items: center;
-        /* padding: 0 40px; */
+        height: calc((100vh - 80px) / 2);
     }
     #landing-page .svg-wallpaper {
         width: 60%;
