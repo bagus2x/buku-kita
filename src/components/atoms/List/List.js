@@ -1,5 +1,6 @@
 import React from 'react';
 import './List.css';
+import { Link } from 'react-router-dom';
 
 const List = (props) => {
 
@@ -14,9 +15,9 @@ const List = (props) => {
 
 export const Item = (props) => {
     
-    const { children, className, onClick, id, style } = props;
+    const { children, className, onClick, id, style, to } = props;
 
-    return React.createElement('li', {
+    return to ? <Link to={to} className="list-item">{ children }</Link>: React.createElement('li', {
             className: `list-item${className ? ' ' +  className : ''}`,
             id,
             onClick,
