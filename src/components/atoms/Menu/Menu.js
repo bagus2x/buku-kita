@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import onClickOutside from 'react-onclickoutside';
 import './Menu.css';
 
-export const Content = React.forwardRef( (props, ref) => {
+export const Content = React.forwardRef((props, ref) => {
 
     return (
-        <div ref={ref} id={props.id} className={`content${props.className ? ' ' + props.className : ''}`}>
+        <div ref={ ref } id={ props.id } className={ `content${ props.className ? ' ' + props.className : '' }` }>
             { props.children }
         </div>
     )
@@ -26,27 +26,19 @@ function Menu (props) {
 
         if(contentRef.current) {
             [].slice.call(contentRef.current.children).forEach((e) => {
-                e.addEventListener('click', () => {
-                    setTimeout(() =>setOpen(false) , 200);
-                })
+                e.addEventListener('click', () => setTimeout(() =>setOpen(false) , 200))
             });
         }
     }
 
-    useEffect(() => { if(contentRef.current) return handleClickItems()});
+    useEffect(() => { if(contentRef.current) return handleClickItems() });
 
     return(
             <div className={`menu${ className ? ' '+ className : ''}`}>
-                { React.cloneElement(children[0], {onClick: () => setOpen(!isOpen)}) }
-                { isOpen ? React.cloneElement(children[1], {ref: contentRef}) : null }
+                { React.cloneElement(children[0], { onClick: () => setOpen(!isOpen) }) }
+                { isOpen ? React.cloneElement(children[1], { ref: contentRef }) : null }
             </div>
     )
-}
-
-Menu.propTypes = {
-    className: PropTypes.string,
-    id: PropTypes.string,
-    children: PropTypes.any
 }
 
 const clickOutsideConfig = {

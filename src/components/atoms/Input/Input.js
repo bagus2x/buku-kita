@@ -7,7 +7,7 @@ const Input = (props) => {
     const inputRef = useRef(null);
 
     return React.createElement('input', {...props, 
-        className: `inp${ variant ? ' ' + variant: '' }${ className ? ' ' + className : ''}`,
+        className: `inp${ variant ? ' ' + variant: '' }${ className ? ' ' + className : '' }`,
         ref: inputRef
     })
 }
@@ -20,9 +20,9 @@ export const Label = (props) => {
 
     return (
         <div
-            className={`input-wrapper${ className ? ' ' + className : ''}`}
+            className={ `input-wrapper${ className ? ' ' + className : '' }` }
         >
-            <label htmlFor={id}>{ title }</label>
+            <label htmlFor={ id }>{ title }</label>
             { Array.isArray(children) ? (
                 <>
                     { React.cloneElement(children[0], { name: id, id: id }) }
