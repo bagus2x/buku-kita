@@ -7,8 +7,18 @@ import './RegisterPage.css';
 
 const RegisterPage = () => {
 
+    let initialFormStatus = {
+        username: '',
+        email: '',
+        phonenumber: '',
+        address: '',
+        password: '',
+        password2: ''
+    }
+
     const [page, setPage] = useState(0);
     const [formValue, setFormValue] = useState({});
+    const [formStatus, setformStatus] = useState(initialFormStatus);
 
     const handleNext = (e) => {
         e.preventDefault();
@@ -23,6 +33,9 @@ const RegisterPage = () => {
 
     const _onSubmit = (e) => {
         e.preventDefault();
+        // contoh penggunaan alert, nanti akan di-replace dengan respon dari server
+        // bagus2x 23:51 pm
+        if(formValue.username.length < 4) setformStatus({username: 'Use 8 characters or more for your username'})
     }
     
     return (
@@ -37,7 +50,7 @@ const RegisterPage = () => {
                     <div className="logo">Logo</div>
                     { page === 0 ? <h1>Create your account</h1> : ''}
                 </div>
-                <Steps getFormValue={getFormValue} step={ page } />
+                <Steps formStatus={ formStatus } getFormValue={getFormValue} step={ page } />
                 <Button onClick={ page !== 2 ? handleNext : _onSubmit } variant="primary">{ page !== 2 ? 'Selanjutnya' : 'Submit' }</Button>
             </form>
         </div>

@@ -3,7 +3,7 @@ import Input, { Label, Alert } from '../../atoms/Input/Input';
 
 const Steps = (props) => {
 
-    const { step, getFormValue } = props;
+    const { step, getFormValue, formStatus } = props;
 
     let initialFormValue = {
         username: '',
@@ -42,10 +42,11 @@ const Steps = (props) => {
                 <>
                     <Label id="username" title="Nama Pengguna">
                         <Input pattern={pattern.username} key="1" value={formValue.username} onChange={ handleInputChange } variant="line" />
-                        <Alert error={true} text="error gais" />
+                        <Alert text={ formStatus.username } />
                     </Label>
                     <Label id="email" title="Email">
                         <Input pattern={pattern.email} key="2" value={formValue.email} onChange={ handleInputChange } variant="line" />
+                        <Alert text={ formStatus.email } />
                     </Label>
                 </>
             )
@@ -54,9 +55,11 @@ const Steps = (props) => {
                 <>
                     <Label id="phonenumber" title="No Handphone">
                         <Input pattern={pattern.phonenumber} value={formValue.phonenumber} onChange={ handleInputChange } variant="line" />
+                        <Alert text={ formStatus.phonenumber } />
                     </Label>
-                        <Label id="address" title="Alamat">
+                    <Label id="address" title="Alamat">
                         <Input value={formValue.address} onChange={ handleInputChange } variant="line" />
+                        <Alert text={ formStatus.address } />
                     </Label>
                 </>
             )
@@ -65,9 +68,11 @@ const Steps = (props) => {
                 <>
                     <Label id="password" title="Password">
                         <Input type="password" value={formValue.password} onChange={ handleInputChange } variant="line" />
+                        <Alert text={ formStatus.password } />
                     </Label>
                         <Label id="password2" title="Konfirmasi Password">
                         <Input type="password" value={formValue.password2} onChange={ handleInputChange } variant="line" />
+                        <Alert text={ formStatus.password2 } />
                     </Label>
                 </>
             )

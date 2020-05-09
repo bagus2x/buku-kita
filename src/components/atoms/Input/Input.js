@@ -26,7 +26,7 @@ export const Label = (props) => {
             { Array.isArray(children) ? (
                 <>
                     { React.cloneElement(children[0], { name: id, id: id }) }
-                    { children[1].props.error ? children[1] : '' }
+                    { children[1].props.text ? children[1] : '' }
                 </>
             ) : React.cloneElement(children, { name: id, id: id }) }
         </div>
