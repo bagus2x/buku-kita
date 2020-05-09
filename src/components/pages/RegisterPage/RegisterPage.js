@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { ReactComponent as Logo } from '../../../assets/img/logo.svg';
 import { IconContext } from 'react-icons';
 import { MdArrowBack } from 'react-icons/md';
 import Steps from './Steps';
@@ -17,16 +16,13 @@ const RegisterPage = () => {
     }
     const handlePrevious = (e) => {
         e.preventDefault();
-        if(page > 0)  setPage(page - 1)
+        if(page > 0)  setPage(page - 1);
     }
 
-    const getFormValue = (data) => {
-        setFormValue(data)
-    }
+    const getFormValue = (data) => setFormValue(data);
 
     const _onSubmit = (e) => {
         e.preventDefault();
-       console.log(formValue)
     }
     
     return (
