@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from '../../atoms/Button/Button';
-import Input, { Label } from '../../atoms/Input/Input';
+import Input, { Label, Alert } from '../../atoms/Input/Input';
 import TopNav from '../../atoms/TopNav/TopNav';
 
 const Components = () => {
@@ -35,6 +35,13 @@ const Components = () => {
 
                 <h1>Input</h1>
                 <Label id="example1" title="Example 1">
+                    <Input variant="line" />
+                    <Alert text="erro" />
+                </Label>
+                <Label id="example2" title="Example 2">
+                    <Input variant="line" />
+                </Label>
+                <Label id="example2" title="Example 2">
                     <Input variant="line" />
                 </Label>
                 <Label id="example2" title="Example 2">

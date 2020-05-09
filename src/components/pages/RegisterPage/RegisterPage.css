@@ -18,7 +18,7 @@
     box-shadow: var(--primary-shadow);
 }
 #register-page .form-group input {
-    background-color: var(--white);
+    background-color: rgb(241, 247, 255);
     margin-top: 5px;
     padding: 20px 0 0 0;
 }
@@ -54,4 +54,7 @@
     position: absolute;
     top: 60px;
     margin: 0;
+}
+#register-page .form-group .input-wrapper {
+    height: 75px;
 }
