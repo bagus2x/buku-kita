@@ -33,8 +33,7 @@ const RegisterPage = () => {
 
     const _onSubmit = (e) => {
         e.preventDefault();
-        // contoh penggunaan alert, nanti akan di-replace dengan respon dari server
-        // bagus2x 23:51 pm
+        // contoh penggunaan alert, nanti akan di-replace dengan respon dari server // bagus2x 23:51 pm
         if(formValue.username.length < 4) setformStatus({username: 'Use 8 characters or more for your username'})
     }
     
