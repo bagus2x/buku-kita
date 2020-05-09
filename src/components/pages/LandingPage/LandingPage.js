@@ -29,7 +29,7 @@ const LandingPage = () => {
     );
     const authLink = (
         <List className="auth-link" expand >
-            <Item ><span>Daftar</span></Item>
+            <Item to="register" ><span>Daftar</span></Item>
             <Item >Masuk</Item>
         </List>
     );
