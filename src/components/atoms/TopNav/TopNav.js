@@ -7,7 +7,7 @@ const TopNav = (props) => {
     
     return (
         <header
-            style={{backgroundColor:`var(--${variant})`}} id="top-nav"
+            style={{backgroundColor:`var(--${variant}-main)`}} id="top-nav"
             className={ classname }
             >
             {children}
