@@ -2,6 +2,13 @@
 
 This is 'Buku Kita' app using ReactJS
 
+### Preview 
+
+```sh
+[WIP 15%]
+```
+[Buku Kita](https://admiring-hoover-55b66c.netlify.app/)
+
 ### Usage
 
 ```sh
@@ -12,7 +19,7 @@ $ npm install
 $ npm start
 # Visit http://localhost:3000
 ```
-### Author
+### Authors
 
 Tubagus
 [bagus2x](https://www.github.com/bagus2x)
