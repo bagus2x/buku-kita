@@ -3,6 +3,7 @@ import { IconContext } from 'react-icons';
 import { MdArrowBack } from 'react-icons/md';
 import Steps from './Steps';
 import Button from '../../atoms/Button/Button';
+import Logo from '../../../assets/img/main_logo.svg';
 import './RegisterPage.css';
 
 const RegisterPage = () => {
@@ -46,11 +47,11 @@ const RegisterPage = () => {
                             <IconContext.Provider value={{size: '30px'}}><MdArrowBack style={{fill: 'var(--text-primary)'}}/></IconContext.Provider>
                         </Button>
                     ): null}
-                    <div className="logo">Logo</div>
                     { page === 0 ? <h1>Create your account</h1> : ''}
                 </div>
                 <Steps formStatus={ formStatus } getFormValue={getFormValue} step={ page } />
-                <Button onClick={ page !== 2 ? handleNext : _onSubmit } variant="primary">{ page !== 2 ? 'Selanjutnya' : 'Submit' }</Button>
+                <Button onClick={ page !== 2 ? handleNext : _onSubmit } variant="primary">{ page !== 2 ? 'Selanjutnya' : 'Daftar' }</Button>
+                <img className="logo" src={ Logo } alt="Buku Kita" width="35"/>
             </form>
         </div>
     )

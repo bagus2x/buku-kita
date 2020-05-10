@@ -7,11 +7,12 @@
     background-color: var(--default-main);
 }
 #register-page .form-group {
+    position: relative;
     display: flex;
     flex-direction: column;
     width: 568px;
     max-width: 80%;
-    height: 400px;
+    height: 480px;
     background-color: white;
     border-radius: 18px;
     padding: 0 20px;
@@ -28,7 +29,7 @@
 #register-page .form-group .header {
     position: relative;
     height: 100px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 #register-page .form-group .header button {
     padding: 5px;
@@ -45,15 +46,17 @@
     justify-self: flex-end;
     align-self: flex-end;
 }
-#register-page .form-group .header .logo {
+#register-page .form-group .logo {
     position: absolute;
-    right: 10px;
-    top: 5px;
+    right: 50%;
+    transform: translateX(50%);
+    top: 20px;
 }
 #register-page .form-group .header h1 {
     position: absolute;
-    top: 60px;
+    top: 80px;
     margin: 0;
+    font-size: 1.5rem;
 }
 #register-page .form-group .input-wrapper {
     height: 75px;

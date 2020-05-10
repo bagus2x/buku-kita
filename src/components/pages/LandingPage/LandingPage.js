@@ -29,8 +29,8 @@ const LandingPage = () => {
     );
     const authLink = (
         <List className="auth-link" expand >
-            <Item to="register" ><span>Daftar</span></Item>
-            <Item >Masuk</Item>
+            <Item to="/register" ><span>Daftar</span></Item>
+            <Item to="/login" >Masuk</Item>
         </List>
     );
 
@@ -56,7 +56,7 @@ const LandingPage = () => {
             </TopNav>
             <div style={{backgroundImage: `url(${ bg })`}} className="greeting">
                 <h1>Perbanyak pengetahuanmu dengan membaca buku setiap hari</h1>
-                <p>BukuKita mendukung kamu untuk mencari buku dari pepustakaan atau pengguna lain</p>
+                <p>BukuKita mendukung kamu untuk mencari buku dari pepustakaan dan pengguna lain</p>
                 <Button variant="primary">Jelajah Sekarang</Button>
             </div>
             <div className="wallpaper">
