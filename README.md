@@ -5,9 +5,11 @@ This is 'Buku Kita' app using ReactJS
 ### Preview 
 
 ```sh
-[WIP 15%]
-```
 [Buku Kita](https://admiring-hoover-55b66c.netlify.app/)
+WIP 15%
+```
+
+
 
 ### Usage
 
