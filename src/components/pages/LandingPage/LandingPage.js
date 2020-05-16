@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { ReactComponent as Wp } from '../../../assets/img/wp123.svg';
 import bg from '../../../assets/img/bg.svg';
 import TopNav from '../../atoms/TopNav/TopNav';
@@ -8,6 +8,7 @@ import { FiMenu } from 'react-icons/fi';
 import { IconContext } from 'react-icons';
 import Menu, { Content } from '../../atoms/Menu/Menu';
 import List, { Item } from '../../atoms/List/List';
+import { useMatchMedia } from '../../utils/utils';
 import './LandingPage.css';
 
 const LandingPage = () => {
@@ -15,10 +16,7 @@ const LandingPage = () => {
     let initialWidth = document.documentElement.clientWidth;
     const [width, setWidth] = useState(initialWidth);
 
-    useEffect(() => {
-        window.addEventListener('resize', () => setWidth(document.documentElement.clientWidth));
-        return () => window.removeEventListener('resize', () => setWidth(document.documentElement.clientWidth));
-    }, []);
+    useMatchMedia((size) => setWidth(size));
 
     const productLink = (
         <List className="list-header" expand >
