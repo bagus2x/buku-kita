@@ -5,17 +5,17 @@ import './Menu.css';
 export const Content = React.forwardRef((props, ref) => {
 
     return (
-        <div ref={ ref } id={ props.id } className={ `content${ props.className ? ' ' + props.className : '' }` }>
-            { props.children }
+        <div ref={ref} id={props.id} className={`content${props.className ? ' ' + props.className : ''}`}>
+            {props.children}
         </div>
     )
 });
 
-function Menu (props) {
+function Menu(props) {
 
     const contentRef = useRef(null);
 
-    const { children, className, id} = props;
+    const { children, className, id, delay } = props;
     const [isOpen, setOpen] = useState(false);
 
     Menu['handleClickOutside_' + id] = () => setOpen(false);
@@ -23,25 +23,25 @@ function Menu (props) {
 
     const handleClickItems = () => {
 
-        if(contentRef.current) {
+        if (contentRef.current) {
             [].slice.call(contentRef.current.children).forEach((e) => {
-                e.addEventListener('click', () => setTimeout(() =>setOpen(false) , 200))
+                e.addEventListener('click', () => setTimeout(() => setOpen(false), delay ? delay : 200))
             });
         }
     }
 
-    useEffect(() => { if(contentRef.current) return handleClickItems() });
+    useEffect(() => { if (contentRef.current) return handleClickItems() });
 
-    return(
-            <div className={`menu${ className ? ' '+ className : ''}`}>
-                { React.cloneElement(children[0], { onClick: () => setOpen(!isOpen) }) }
-                { isOpen ? React.cloneElement(children[1], { ref: contentRef }) : null }
-            </div>
+    return (
+        <div className={`menu${className ? ' ' + className : ''}`}>
+            {React.cloneElement(children[0], { onClick: () => setOpen(!isOpen) })}
+            {isOpen ? React.cloneElement(children[1], { ref: contentRef }) : null}
+        </div>
     )
 }
 
 const clickOutsideConfig = {
-  handleClickOutside: ({ props }) => Menu['handleClickOutside_' + props.id],
+    handleClickOutside: ({ props }) => Menu['handleClickOutside_' + props.id],
 };
- 
- export default onClickOutside(Menu, clickOutsideConfig);
+
+export default onClickOutside(Menu, clickOutsideConfig);
