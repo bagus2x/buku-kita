@@ -20,7 +20,7 @@
     background-color: var(--bg-active-superlight);
 }
 .list-group  button.item svg {
-    fill: var(--text-primary);
+    fill: var(--text-secondary);
 }
 .list-group  button.item:focus svg {
     fill: var(--info-dark);
