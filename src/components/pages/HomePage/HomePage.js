@@ -15,12 +15,24 @@ import List, { Item } from '../../atoms/List2/List';
 import Menu, { Content } from '../../atoms/Menu/Menu';
 import { useMatchMedia } from '../../utils/utils';
 import SearchBox from './SearchBox';
+import { data } from './dummydata';
 
 
 const HomePage = () => {
     let initialWidth = document.documentElement.clientWidth;
     const [width, setWidth] = useState(initialWidth);
     useMatchMedia((size) => setWidth(size));
+
+    let notification = data.notification.map((d) => <>
+        <Item className="item-notif" variant="div rectangle">
+            <span><img className="image-notif" src={d.image} alt="judul" /></span>
+            <span>
+                <h4>{d.title}</h4>
+                <p>{d.message}</p>
+                <span className="time">{d.time}</span>
+            </span>
+        </Item>
+    </>);
 
     return (
         <div id="home-page">
@@ -34,36 +46,23 @@ const HomePage = () => {
                 </div>
                 {width > 768 ? <SearchBox type="desktop" /> : ''}
                 <List className="user-menu">
-                    <Item effect variant="button circle">
-                        <BsBookmarkPlus size={24} />
-                    </Item>
+                    <Menu id="menu3" delay={-1} className="user-container-menu">
+                        <Item effect variant="button circle">
+                            <BsBookmarkPlus size={24} />
+                        </Item>
+                        <Content>
+
+                        </Content>
+                    </Menu>
                     <Menu id="menu2" delay={-1} className="user-container-menu user-notif-menu">
                         <Item effect variant="button circle">
                             <IoMdNotificationsOutline size={24} />
                         </Item>
                         <Content>
                             <List>
-                                <Item className="item-notif" variant="div rectangle">
-                                    <span><img className="image-notif" src="https://cdn.waterstones.com/bookjackets/large/9780/2413/9780241361979.jpg" alt="judul" /></span>
-                                    <span>
-                                        <h4>Pengambilan</h4>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, ab. Lorovident.</p>
-                                    </span>
-                                </Item>
-                                <Item className="item-notif" variant="div rectangle">
-                                    <span><img className="image-notif" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTC1lLwp2Va154YxbDphvUZJZ48QY1oktbWBko5zpoR_T4cuD-E&usqp=CAU" alt="judul" /></span>
-                                    <span>
-                                        <h4>Pengembalian</h4>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, ab. Lorovident.</p>
-                                    </span>
-                                </Item>
-                                <Item className="item-notif" variant="div rectangle">
-                                    <span><img className="image-notif" src="https://cdn.waterstones.com/bookjackets/large/9780/2413/9780241361979.jpg" alt="judul" /></span>
-                                    <span>
-                                        <h4>Pengembalian</h4>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, ab. Lorovident.</p>
-                                    </span>
-                                </Item>
+                                <h4 className="title-menu">Notifikasi</h4>
+                                {notification}
+                                <div className="show-more">Tampilkan lebih banyak</div>
                             </List>
                         </Content>
                     </Menu>
@@ -71,7 +70,7 @@ const HomePage = () => {
                         <Item effect variant="button circle">
                             <IoMdArrowDropdown size={24} />
                         </Item>
-                        <Content>
+                        <Content className="profile-menu">
                             <List>
                                 <Item variant="div rectangle">
                                     <span className="avatar">

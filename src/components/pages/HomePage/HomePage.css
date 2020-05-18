@@ -46,6 +46,7 @@
     width: 40px;
     background: transparent;
     cursor: pointer;
+    z-index: 3;
 }
 #home-page #top-nav .search-box-for-desktop .search-icon:hover {
     fill: var(--primary-dark);
@@ -56,6 +57,7 @@
     background: var(--default-light);
     position: absolute;
     width: 98%;
+    min-width: 320px;
     right: 0;
     transition: width .2s;
     z-index: 2;
@@ -107,8 +109,9 @@
     background-color: white;
 }
 .user-container-menu .content{
-    width: 300px;
+    width: 380px;
     padding: 10px 10px;
+    right: 0px;
 }
 .user-container-menu .content .list-group .item:first-child{
     height: 80px;
@@ -156,7 +159,8 @@
     align-items: center;
 }
 .user-container-menu.user-notif-menu .content .item {
-    padding: 10px 5px;
+    padding: 10px 5px 20px 5px;
+    position: relative;
 }
 .item-notif span h4 {
     margin-bottom: 2.5px;
@@ -171,6 +175,25 @@
     height: 45px;
     overflow: hidden;
     justify-content: center;
+}
+.item-notif .time {
+    font-size: .65rem;
+    position: absolute;
+    left: 55px;
+    bottom: 2px;
+    color: var(--info-main);
+    font-weight: 500;
+}
+.user-notif-menu .show-more {
+    margin-top: 10px;
+    font-size: .75rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.user-notif-menu .show-more:hover {
+    color: var(--primary-main);
 }
 #home-page #top-nav .search-box-for-mobile .input-button-close-box input {
     height: 40px;
@@ -232,6 +255,11 @@
 .content.result-box .item.rectangle:hover {
     background-color: var(--default-light);
 }
+.user-menu .title-menu {
+    align-self: flex-start;
+    margin: 0 0 10px 5px;
+    font-weight: bold;
+}
 @media screen and (max-width: 768px) {
     #home-page #top-nav {
         padding: 0 20px;
@@ -248,9 +276,6 @@
     #home-page #top-nav .left-wrapper {
         flex: inherit;
     }
-    .user-container-menu .content{
-        width: 260px;
-    }
     .brand{
         display: none;
     }
@@ -264,5 +289,6 @@
     }
     .user-container-menu .content {
         right: 0;
+        width: 260px;
     }
 }
