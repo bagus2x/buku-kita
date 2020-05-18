@@ -195,6 +195,43 @@
 .user-notif-menu .show-more:hover {
     color: var(--primary-main);
 }
+.content .item.rectangle.book-cart {
+    display: grid;
+    padding: 20px 10px;
+    grid-template-columns: auto 5fr 1fr;
+    grid-template-areas: 
+    'img prd prc'
+    'img lib del';
+    align-items: center;
+}
+.content .item.rectangle.book-cart img {
+    grid-area: img;
+    width: 40px;
+    height: 40px;
+    margin-right: 5px;
+}
+.content .item.rectangle.book-cart .product-name {
+    grid-area: prd;
+    font-size: .9rem;
+    font-weight: bold;
+}
+.content .item.rectangle.book-cart .price {
+    grid-area: prc;
+    text-align: right;
+    font-size: .8rem;
+}
+.content .item.rectangle.book-cart .library {
+    grid-area: lib;
+    margin-top: 5px;
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+}
+.content .item.rectangle.book-cart .delete {
+    grid-area: del;
+    text-align: right;
+    font-size: .8rem;
+    color: var(--danger-main);
+}
 #home-page #top-nav .search-box-for-mobile .input-button-close-box input {
     height: 40px;
     justify-self: flex-end;

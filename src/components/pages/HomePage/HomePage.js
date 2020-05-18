@@ -23,8 +23,8 @@ const HomePage = () => {
     const [width, setWidth] = useState(initialWidth);
     useMatchMedia((size) => setWidth(size));
 
-    let notification = data.notification.map((d) => <>
-        <Item className="item-notif" variant="div rectangle">
+    let notification = data.notification.map((d, i) =>
+        <Item key={i} className="item-notif" variant="div rectangle">
             <span><img className="image-notif" src={d.image} alt="judul" /></span>
             <span>
                 <h4>{d.title}</h4>
@@ -32,7 +32,7 @@ const HomePage = () => {
                 <span className="time">{d.time}</span>
             </span>
         </Item>
-    </>);
+    );
 
     return (
         <div id="home-page">
@@ -51,7 +51,16 @@ const HomePage = () => {
                             <BsBookmarkPlus size={24} />
                         </Item>
                         <Content>
-
+                            <List>
+                                <h4 className="title-menu">Ditambahkan</h4>
+                                <Item sp="1" variant="div rectangle" className="book-cart">
+                                    <img src="https://cdn.waterstones.com/bookjackets/large/9780/2413/9780241361979.jpg" alt="" />
+                                    <h4 className="product-name">Product Name</h4>
+                                    <div className="library">Diambil sebelum pukul 4:05 pm di Perpustakaan Kota Malang</div>
+                                    <div className="price">Rp.0</div>
+                                    <div className="delete">Hapus</div>
+                                </Item>
+                            </List>
                         </Content>
                     </Menu>
                     <Menu id="menu2" delay={-1} className="user-container-menu user-notif-menu">
