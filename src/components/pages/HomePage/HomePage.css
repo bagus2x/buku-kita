@@ -13,13 +13,26 @@
     align-items: center;
 }
 /* Center Div */
-#home-page #top-nav .input-wrapper {
+#home-page #top-nav .search-box-for-desktop {
     flex: 1;
     display: flex;
     align-items: center;
     position: relative;
+    width: 100%;
 }
-#home-page #top-nav .input-wrapper .search-icon {
+#home-page #top-nav .search-box-for-desktop .content.result-box {
+    position: absolute;
+    width: 100%;
+    min-width: 0;
+    z-index: 1;
+    min-height: 0;
+    background-color: white;
+    top: 25px;
+    border-radius: 8px;
+    box-shadow: var(--light-shadow);
+    align-items: flex-start;
+}
+#home-page #top-nav .search-box-for-desktop .search-icon {
     position: absolute;
     fill: var(--primary-main);
     right: 1px;
@@ -31,10 +44,10 @@
     background: transparent;
     cursor: pointer;
 }
-#home-page #top-nav .input-wrapper .search-icon:hover {
+#home-page #top-nav .search-box-for-desktop .search-icon:hover {
     fill: var(--primary-dark);
 }
-#home-page #top-nav .input-wrapper input, .search-box-for-mobile .input-button-close-box input {
+#home-page #top-nav .search-box-for-desktop input, .search-box-for-mobile .input-button-close-box input {
     padding: 8px 10px;
     border-color: transparent;
     background: var(--default-light);
@@ -42,8 +55,9 @@
     width: 98%;
     right: 0;
     transition: width .2s;
+    z-index: 2;
 }
-#home-page #top-nav .input-wrapper input:focus {
+#home-page #top-nav .search-box-for-desktop input:focus {
     width: 100%;
 }
 /* User Menu Div */
@@ -205,10 +219,10 @@
     #home-page #top-nav {
         height: 55px;
     }
-    #home-page #top-nav .input-wrapper {
+    #home-page #top-nav .search-box-for-desktop {
         width: 90%;
     }
-    #home-page #top-nav .input-wrapper:focus {
+    #home-page #top-nav .search-box-for-desktop:focus {
         width: 95%;
     }
     #home-page #top-nav .left-wrapper {

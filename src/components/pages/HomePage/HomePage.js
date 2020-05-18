@@ -1,36 +1,28 @@
 import React, { useState } from 'react';
 import './HomePage.css';
 import TopNav from '../../atoms/TopNav/TopNav';
-import Input from '../../atoms/Input/Input';
 import {
     IoMdNotificationsOutline,
     IoMdArrowDropdown,
     IoMdAdd,
-    IoMdSearch,
     IoMdExit,
     IoMdHelpCircle,
     IoMdSettings,
+    GrCart,
+    BsBookmarkPlus,
 } from 'react-icons/all';
 import Logo from '../../../assets/img/main_logo.svg';
 import Avatar from '../../../assets/img/avatar.svg';
 import List, { Item } from '../../atoms/List2/List';
 import Menu, { Content } from '../../atoms/Menu/Menu';
 import { useMatchMedia } from '../../utils/utils';
-import SearchBoxMobile from './SearchBoxForMobile';
+import SearchBox from './SearchBox';
 
 
 const HomePage = () => {
     let initialWidth = document.documentElement.clientWidth;
     const [width, setWidth] = useState(initialWidth);
     useMatchMedia((size) => setWidth(size));
-
-
-    let searchBox = (
-        <div className="input-wrapper">
-            <Input placeholder="Cari di Buku Kita" variant="full-border" />
-            <IoMdSearch className="search-icon" size={20} />
-        </div>
-    )
 
     return (
         <div id="home-page">
@@ -40,12 +32,12 @@ const HomePage = () => {
                     <span className="brand" style={{ marginLeft: '10px', fontWeight: 'bolder', fontSize: '18px' }}>
                         <span style={{ fontSize: '18px' }}>Buku</span> Kita
                     </span>
-                    {width <= 768 ? <SearchBoxMobile id="box-1" /> : ''}
+                    {width <= 768 ? <SearchBox type="mobile" id="box-1" /> : ''}
                 </div>
-                {width > 768 ? searchBox : ''}
+                {width > 768 ? <SearchBox type="desktop" /> : ''}
                 <List className="user-menu">
                     <Item effect variant="button circle">
-                        <IoMdAdd size={24} />
+                        <BsBookmarkPlus size={24} />
                     </Item>
                     <Item effect variant="button circle">
                         <IoMdNotificationsOutline size={24} />
