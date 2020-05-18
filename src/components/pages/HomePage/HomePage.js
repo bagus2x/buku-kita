@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './HomePage.css';
 import TopNav from '../../atoms/TopNav/TopNav';
 import Input from '../../atoms/Input/Input';
@@ -9,27 +9,40 @@ import {
     IoMdSearch,
     IoMdExit,
     IoMdHelpCircle,
-    IoMdSettings
+    IoMdSettings,
 } from 'react-icons/all';
 import Logo from '../../../assets/img/main_logo.svg';
 import Avatar from '../../../assets/img/avatar.svg';
 import List, { Item } from '../../atoms/List2/List';
 import Menu, { Content } from '../../atoms/Menu/Menu';
+import { useMatchMedia } from '../../utils/utils';
+import SearchBoxMobile from './SearchBoxForMobile';
+
 
 const HomePage = () => {
+    let initialWidth = document.documentElement.clientWidth;
+    const [width, setWidth] = useState(initialWidth);
+    useMatchMedia((size) => setWidth(size));
+
+
+    let searchBox = (
+        <div className="input-wrapper">
+            <Input placeholder="Cari di Buku Kita" variant="full-border" />
+            <IoMdSearch className="search-icon" size={20} />
+        </div>
+    )
+
     return (
         <div id="home-page">
             <TopNav>
                 <div className="left-wrapper">
-                    <img src={Logo} alt="Buku Kita" width="35" />
+                    <img className="logo" src={Logo} alt="Buku Kita" width="35" />
                     <span className="brand" style={{ marginLeft: '10px', fontWeight: 'bolder', fontSize: '18px' }}>
                         <span style={{ fontSize: '18px' }}>Buku</span> Kita
                     </span>
+                    {width <= 768 ? <SearchBoxMobile id="box-1" /> : ''}
                 </div>
-                <div className="input-wrapper">
-                    <Input placeholder="Cari di Buku Kita" variant="full-border" />
-                    <IoMdSearch className="search-icon" size={20} />
-                </div>
+                {width > 768 ? searchBox : ''}
                 <List className="user-menu">
                     <Item effect variant="button circle">
                         <IoMdAdd size={24} />
@@ -41,7 +54,7 @@ const HomePage = () => {
                         <Item effect variant="button circle">
                             <IoMdArrowDropdown size={24} />
                         </Item>
-                        <Content id="1" >
+                        <Content id="content-1" >
                             <List>
                                 <Item variant="div rectangle">
                                     <span className="avatar">
