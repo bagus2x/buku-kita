@@ -38,7 +38,7 @@ const TopNavbar = () => {
         <div id="top-navbar">
             <TopNav>
                 <div className="left-wrapper">
-                    <img className="logo" src={Logo} alt="Buku Kita" width="35" />
+                    <img className="logo" src={Logo} alt="Buku Kita" width="40" />
                     <span className="brand" style={{ marginLeft: '10px', fontWeight: 'bolder', fontSize: '18px' }}>
                         <span style={{ fontSize: '18px' }}>Buku</span> Kita
                     </span>

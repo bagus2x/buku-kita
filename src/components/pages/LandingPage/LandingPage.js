@@ -36,29 +36,29 @@ const LandingPage = () => {
         <div id="landing-page">
             <TopNav variant="transparent">
                 <div className="left-wrapper">
-                    <img src={ Logo } alt="Buku Kita" width="35"/>
-                    <span style={{ marginLeft:"10px", fontWeight: "bolder", fontSize:"18px"}}> <span style={{ fontSize:"18px" }}>Buku</span> Kita</span>
+                    <img src={Logo} alt="Buku Kita" width="40" />
+                    <span style={{ marginLeft: "10px", fontWeight: "bolder", fontSize: "18px" }}> <span style={{ fontSize: "18px" }}>Buku</span> Kita</span>
                 </div>
-                { width <= 576 ? null : productLink }
-                { width <= 768 ? null : authLink }
+                {width <= 576 ? null : productLink}
+                {width <= 768 ? null : authLink}
                 <Menu id="1" className="lp-menu" >
                     <Button className="toggle">
-                        <IconContext.Provider value={{ size: '30px' }}><FiMenu style={{ fill: 'var(--text-primary)'}}/></IconContext.Provider>
+                        <IconContext.Provider value={{ size: '30px' }}><FiMenu style={{ fill: 'var(--text-primary)' }} /></IconContext.Provider>
                     </Button>
                     <Content className="lp-content" >
-                        { width <= 576 ? productLink : null }
-                        { width <= 576 ? <hr style={{ margin: '-10px 0', width: '100%' }} /> : null }
-                        { width <= 768 ? authLink : null }
+                        {width <= 576 ? productLink : null}
+                        {width <= 576 ? <hr style={{ margin: '-10px 0', width: '100%' }} /> : null}
+                        {width <= 768 ? authLink : null}
                     </Content>
                 </Menu>
             </TopNav>
-            <div style={{backgroundImage: `url(${ bg })`}} className="greeting">
+            <div style={{ backgroundImage: `url(${bg})` }} className="greeting">
                 <h1>Perbanyak pengetahuanmu dengan membaca buku setiap hari</h1>
                 <p>BukuKita mendukung kamu untuk mencari buku dari pepustakaan dan pengguna lain</p>
                 <Button variant="primary">Jelajah Sekarang</Button>
             </div>
             <div className="wallpaper">
-               <Wp className="svg-wallpaper" />
+                <Wp className="svg-wallpaper" />
             </div>
         </div>
     )
