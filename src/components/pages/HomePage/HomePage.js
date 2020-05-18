@@ -4,11 +4,9 @@ import TopNav from '../../atoms/TopNav/TopNav';
 import {
     IoMdNotificationsOutline,
     IoMdArrowDropdown,
-    IoMdAdd,
     IoMdExit,
     IoMdHelpCircle,
     IoMdSettings,
-    GrCart,
     BsBookmarkPlus,
 } from 'react-icons/all';
 import Logo from '../../../assets/img/main_logo.svg';
@@ -39,14 +37,41 @@ const HomePage = () => {
                     <Item effect variant="button circle">
                         <BsBookmarkPlus size={24} />
                     </Item>
-                    <Item effect variant="button circle">
-                        <IoMdNotificationsOutline size={24} />
-                    </Item>
-                    <Menu delay={-1} className="user-account-menu">
+                    <Menu id="menu2" delay={-1} className="user-container-menu user-notif-menu">
+                        <Item effect variant="button circle">
+                            <IoMdNotificationsOutline size={24} />
+                        </Item>
+                        <Content>
+                            <List>
+                                <Item className="item-notif" variant="div rectangle">
+                                    <span><img className="image-notif" src="https://cdn.waterstones.com/bookjackets/large/9780/2413/9780241361979.jpg" alt="judul" /></span>
+                                    <span>
+                                        <h4>Pengambilan</h4>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, ab. Lorovident.</p>
+                                    </span>
+                                </Item>
+                                <Item className="item-notif" variant="div rectangle">
+                                    <span><img className="image-notif" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTC1lLwp2Va154YxbDphvUZJZ48QY1oktbWBko5zpoR_T4cuD-E&usqp=CAU" alt="judul" /></span>
+                                    <span>
+                                        <h4>Pengembalian</h4>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, ab. Lorovident.</p>
+                                    </span>
+                                </Item>
+                                <Item className="item-notif" variant="div rectangle">
+                                    <span><img className="image-notif" src="https://cdn.waterstones.com/bookjackets/large/9780/2413/9780241361979.jpg" alt="judul" /></span>
+                                    <span>
+                                        <h4>Pengembalian</h4>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, ab. Lorovident.</p>
+                                    </span>
+                                </Item>
+                            </List>
+                        </Content>
+                    </Menu>
+                    <Menu id="menu1" delay={-1} className="user-container-menu">
                         <Item effect variant="button circle">
                             <IoMdArrowDropdown size={24} />
                         </Item>
-                        <Content id="content-1" >
+                        <Content>
                             <List>
                                 <Item variant="div rectangle">
                                     <span className="avatar">

@@ -19,6 +19,10 @@
     align-items: center;
     position: relative;
     width: 100%;
+    box-sizing: border-box;
+}
+#home-page #top-nav .search-box-for-desktop .content.result-box .history {
+    width: 100% !important;
 }
 #home-page #top-nav .search-box-for-desktop .content.result-box {
     position: absolute;
@@ -26,7 +30,6 @@
     min-width: 0;
     z-index: 1;
     min-height: 0;
-    background-color: white;
     top: 25px;
     border-radius: 8px;
     box-shadow: var(--light-shadow);
@@ -98,19 +101,19 @@
     margin-right: 5px;
     box-sizing: border-box;
 }
-#top-nav  .user-account-menu .content .list-group .item .avatar {
+#top-nav  .user-container-menu .content .list-group .item .avatar {
     width: 50px;
     height: 50px;
     background-color: white;
 }
-.user-account-menu .content{
+.user-container-menu .content{
     width: 300px;
     padding: 10px 10px;
 }
-.user-account-menu .content .list-group .item:first-child{
+.user-container-menu .content .list-group .item:first-child{
     height: 80px;
 }
-.user-account-menu .content .list-group .item {
+.user-container-menu .content .list-group .item {
     width: 100%;
     justify-content: flex-start;
     padding: 2.5px;
@@ -120,10 +123,10 @@
     box-sizing: border-box;
     align-items: center;
 }
-.user-account-menu .content .list-group {
+.user-container-menu .content .list-group {
     flex-direction: column;
 }
-.user-account-menu .content .list-group .item:hover {
+.user-container-menu .content .list-group .item:hover {
     background-color: var(--default-light);
 }
 .item-icon {
@@ -151,6 +154,22 @@
     align-items: center;
     justify-content: flex-end;
     align-items: center;
+}
+#home-page #top-nav  .user-container-menu.user-notif-menu .content .item {
+    padding: 10px 5px;
+}
+.item-notif span h4 {
+    margin-bottom: 2.5px;
+}
+.item-notif span p {
+    font-size: .75rem;
+}
+.image-notif {
+    display: block;
+    margin-right: 5px;
+    border-radius: 5px;
+    width: 40px;
+    height: auto;
 }
 #home-page #top-nav .search-box-for-mobile .input-button-close-box input {
     height: 40px;
@@ -228,7 +247,7 @@
     #home-page #top-nav .left-wrapper {
         flex: inherit;
     }
-    .user-account-menu .content{
+    .user-container-menu .content{
         width: 260px;
     }
     .brand{
@@ -242,7 +261,7 @@
     #top-nav .user-menu .avatar-wrapper{
         display: none;
     }
-    .user-account-menu .content {
+    .user-container-menu .content {
         right: 0;
     }
 }
