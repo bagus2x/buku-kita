@@ -1,18 +1,18 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import './Input.css';
 
-const Input = (props) => {
-    
+const Input = React.forwardRef((props, ref) => {
+
     const { variant, className } = props;
-    const inputRef = useRef(null);
 
-    return React.createElement('input', {...props, 
-        className: `inp${ variant ? ' ' + variant: '' }${ className ? ' ' + className : '' }`,
-        ref: inputRef
+    return React.createElement('input', {
+        ...props,
+        className: `inp${variant ? ' ' + variant : ''}${className ? ' ' + className : ''}`,
+        ref
     })
-}
+})
 
-export const Alert = (props) =>  <span className="alert form">{ props.text }</span>;
+export const Alert = (props) => <span className="alert form">{props.text}</span>;
 
 export const Label = (props) => {
 
@@ -20,15 +20,15 @@ export const Label = (props) => {
 
     return (
         <div
-            className={ `input-wrapper${ className ? ' ' + className : '' }` }
+            className={`input-wrapper${className ? ' ' + className : ''}`}
         >
-            <label htmlFor={ id }>{ title }</label>
-            { Array.isArray(children) ? (
+            <label htmlFor={id}>{title}</label>
+            {Array.isArray(children) ? (
                 <>
-                    { React.cloneElement(children[0], { name: id, id: id }) }
-                    { children[1].props.text ? children[1] : '' }
+                    {React.cloneElement(children[0], { name: id, id: id })}
+                    {children[1].props.text ? children[1] : ''}
                 </>
-            ) : React.cloneElement(children, { name: id, id: id }) }
+            ) : React.cloneElement(children, { name: id, id: id })}
         </div>
     )
 }
