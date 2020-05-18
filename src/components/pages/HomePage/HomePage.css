@@ -155,7 +155,7 @@
     justify-content: flex-end;
     align-items: center;
 }
-#home-page #top-nav  .user-container-menu.user-notif-menu .content .item {
+.user-container-menu.user-notif-menu .content .item {
     padding: 10px 5px;
 }
 .item-notif span h4 {
@@ -165,11 +165,12 @@
     font-size: .75rem;
 }
 .image-notif {
-    display: block;
+    display: flex;
     margin-right: 5px;
-    border-radius: 5px;
-    width: 40px;
-    height: auto;
+    width: 45px;
+    height: 45px;
+    overflow: hidden;
+    justify-content: center;
 }
 #home-page #top-nav .search-box-for-mobile .input-button-close-box input {
     height: 40px;
