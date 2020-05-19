@@ -112,7 +112,7 @@
     .side-navbar {
         height: 70px;
         width: 100vw !important;
-        top: calc(100% - 70px) !important;
+        top: calc(100vh - 70px) !important;
         position: fixed !important;
     }
     .side-navbar *, .side-navbar  .list-group .item.rectangle {
