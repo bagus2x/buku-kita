@@ -108,11 +108,11 @@
         flex-direction: row;
         justify-content: space-evenly;
         align-items: center;
-        position: fixed !important;
     }
     .side-navbar {
         height: 70px;
         width: 100vw !important;
         top: calc(100% - 70px) !important;
+        position: fixed !important;
     }
 }
