@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ReactComponent as Wp } from '../../../assets/img/wp123.svg';
+import { ReactComponent as Wp } from '../../../assets/img/undraw_book_lover_mkck.svg';
 import bg from '../../../assets/img/bg.svg';
 import TopNav from '../../atoms/TopNav/TopNav';
 import Logo from '../../../assets/img/main_logo.svg';
