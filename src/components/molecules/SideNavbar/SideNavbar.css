@@ -113,6 +113,6 @@
     .side-navbar {
         height: 70px;
         width: 100vw !important;
-        top: calc(100vh - 70px);
+        top: calc(100% - 70px) !important;
     }
 }
