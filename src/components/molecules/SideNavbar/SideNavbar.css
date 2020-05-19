@@ -112,8 +112,10 @@
     .side-navbar {
         height: 70px;
         width: 100vw !important;
-        top: calc(100vh - 70px) !important;
+        top: calc(100% - 70px) !important;
         position: fixed !important;
-        min-height: -webkit-fill-available !important
+    }
+    .side-navbar *, .side-navbar  .list-group .item.rectangle {
+        transition: none !important;
     }
 }
