@@ -4,9 +4,13 @@ import List, { Item } from '../../atoms/List2/List';
 import { useState } from 'react';
 import { GoHome, GoChecklist, GoBookmark, GoHistory } from 'react-icons/go';
 import './SideNavbar.css';
+import { useMatchMedia } from '../../utils/utils';
 
 const SideNavbar = () => {
+    let initialWidth = document.documentElement.clientWidth;
     const [navbarMax, setNavbarMax] = useState(false);
+    const [width, setWidth] = useState(initialWidth);
+    useMatchMedia((size) => setWidth(size));
 
     let icon = {
         home: <span className="item-icon" ><GoHome size="25" /></span>,
@@ -21,7 +25,7 @@ const SideNavbar = () => {
     return (
         <div className={`side-navbar ${navbarMax ? 'maximize' : 'minimize'}`}>
             <List>
-                <Item onClick={() => setNavbarMax(!navbarMax)} className="btn-arrow" effect variant="div circle">{icon.arrow}</Item>
+                {width > 576 ? <Item onClick={() => setNavbarMax(!navbarMax)} className="btn-arrow" effect variant="div circle">{icon.arrow}</Item> : ''}
                 <Item className="active" variant="div rectangle">{icon.home}{title('Beranda')}</Item>
                 <Item to="/user/collections" variant="div rectangle">{icon.collections}{title('Koleksi')}</Item>
                 <Item to="/user/bookmark" variant="div rectangle">{icon.bookmark}{title('Ditandai')}</Item>

@@ -6,7 +6,7 @@
 .container {
     grid-area: cont;
     margin-left: 60px;
-    padding: 5px;
+    /* padding: 5px; */
 }
 .content-wrapper {
     box-sizing: border-box;
@@ -17,5 +17,18 @@
 @media screen and (max-width: 768px) {
     .container {
         margin-left: 50px !important;
+    }
+}
+@media screen and (max-width: 576px) {
+    .base {
+        grid-template-columns: auto !important;
+        grid-template-areas: 'snav' 'cont' !important;
+    }
+    .container {
+        padding: 0 !important;
+        margin-left: 0 !important;
+    }
+    .content-wrapper {
+        padding: 5px;
     }
 }

@@ -101,3 +101,15 @@
         width: 70px;
     }
 }
+@media screen and (max-width: 576px) {
+    .side-navbar .list-group {
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .side-navbar {
+        height: 70px;
+        width: 100vw !important;
+        top: calc(100vh - 70px);
+    }
+}
