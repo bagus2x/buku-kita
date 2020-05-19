@@ -1,0 +1,106 @@
+.base > .container {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-areas:
+                        'snav cwrp';
+}
+.side-navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(100vh - 60px);
+    background-color: var(--pure-white);
+    box-shadow: var(--light-shadow-s);
+    z-index: 777;
+    box-sizing: border-box;
+    grid-area: snav;
+    position: sticky;
+    top: 60px;
+    padding: 10px;
+}
+.side-navbar.maximize {
+    width: 320px;
+}
+.side-navbar  .list-group {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.side-navbar  .list-group .btn-arrow {
+    align-self: flex-end;
+    background-color: transparent;
+    margin-bottom: 10px;
+}
+.side-navbar  .list-group .btn-arrow:hover {
+    background-color: var(--default-light);
+}
+.side-navbar  .list-group .btn-arrow svg {
+    fill: var(--text-secondary);
+}
+.side-navbar  .list-group .item.rectangle {
+    box-sizing: border-box;
+    margin: 0;
+    width: 100%;
+    justify-content: flex-start;
+    padding: 10px;
+    background-color: var(--pure-white);
+    font-size: .9rem;
+    color: var(--text-primary);
+    font-weight: 600;
+}
+.side-navbar.minimize  .list-group .item.rectangle {
+    justify-content: center;
+}
+.side-navbar .item-icon {
+    background: var(--white);
+    width: 35px;
+    height: 35px;
+}
+.side-navbar .item-icon svg {
+    fill: var(--text-disabled);
+}
+.side-navbar .item.rectangle.active .item-icon {
+    background-color: var(--primary-main);
+}
+.side-navbar .item.rectangle.active .item-icon svg {
+    fill: var(--pure-white);
+}
+.side-navbar .item.rectangle.active {
+    background-color: var(--bg-active-superlight);
+    font-weight: bolder;
+}
+.side-navbar .item.rectangle.active:hover {
+    cursor: default;
+    background-color: var(--bg-active-superlight);
+}
+.side-navbar .item.rectangle:hover {
+    background-color: var(--default-light);
+}
+.side-navbar.minimize {
+    width: 60px;
+    align-items: center;
+}
+.side-navbar.minimize .item.rectangle {
+    width: 100%;
+    padding: 5px;
+    margin: 1.25px;
+}
+.side-navbar.minimize .item.rectangle .item-icon {
+    margin: auto 0;
+}
+.content-wrapper {
+    box-sizing: border-box;
+    padding: 0 20px;
+    grid-area: cwrp;
+    width: 100%;
+    margin-top: 60px;
+}
+
+@media screen and (max-width: 768px) {
+    .side-navbar {
+        top: 55px;
+    }
+    .content-wrapper {
+        /* margin-left: -320px; */
+    }
+}
