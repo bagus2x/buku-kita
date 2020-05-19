@@ -27,6 +27,7 @@
     .container {
         padding: 0 !important;
         margin-left: 0 !important;
+        margin-bottom: 70px;
     }
     .content-wrapper {
         padding: 5px;
