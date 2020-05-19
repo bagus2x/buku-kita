@@ -1,10 +1,13 @@
 #top-navbar #top-nav {
-    background: white;
+    background: white !important;
     height: 60px;
     justify-content: space-between;
     align-items: center;
     box-shadow: var(--light-shadow-s);
     box-sizing: border-box;
+    position: fixed;
+    width: 100vw;
+    z-index: 888;
 }
 /* Left Div */
 #top-navbar #top-nav .left-wrapper {
