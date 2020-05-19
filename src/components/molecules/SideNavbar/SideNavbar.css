@@ -115,7 +115,4 @@
         top: calc(100vh - 70px) !important;
         position: fixed !important;
     }
-    .side-navbar *, .side-navbar  .list-group .item.rectangle {
-        transition: none !important;
-    }
 }
