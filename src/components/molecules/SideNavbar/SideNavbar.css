@@ -103,9 +103,12 @@
 }
 @media screen and (max-width: 576px) {
     .side-navbar .list-group {
+        width: 100vw;
+        display: flex !important;
         flex-direction: row;
         justify-content: space-evenly;
         align-items: center;
+        position: fixed !important;
     }
     .side-navbar {
         height: 70px;
