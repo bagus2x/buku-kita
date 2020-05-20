@@ -60,5 +60,8 @@ hr {
     border-top: 1px solid var(--divider);
     margin: 1rem 0;
 }
+img {
+    pointer-events: none;
+}
 :focus {outline:none;}
 ::-moz-focus-inner {border:0;}
