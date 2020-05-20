@@ -61,15 +61,15 @@ const HomePage = () => {
                         </div>
                         <div className="card-product">
                             <div className="image-product"><span>Gambar</span></div>
-                            CARD
+                            <h4>Judul</h4>
                         </div>
                         <div className="card-product">
                             <div className="image-product"><span>Gambar</span></div>
-                            CARD
+                            <h4>Judul</h4>
                         </div>
                         <div className="card-product">
                             <div className="image-product"><span>Gambar</span></div>
-                            CARD
+                            <h4>Judul</h4>
                         </div>
                     </div>
                 </div>
