@@ -3,6 +3,7 @@ import TopNavbar from '../../molecules/TopNavbar/TopNavbar';
 import SideNavbar from '../../molecules/SideNavbar/SideNavbar';
 import './HomePage.css';
 import Button from '../../atoms/Button/Button';
+import Product from '../../molecules/Product/Product';
 
 const HomePage = () => {
 
@@ -17,60 +18,20 @@ const HomePage = () => {
                         <p>Ikutii event dan dapatkan hadiah hingga 2000 Iphone 12 secara gratis</p>
                         <Button variant="default">Gabung Sekarang</Button>
                     </div>
-                    <h4 style={{ margin: '20px 0 -15px 0' }}>Rekomendasi</h4>
+                    <h4 className="title-thumb">Rekomendasi</h4>
                     <div className="container-product">
-                        <div className="card-product">
-                            <div className="image-product"><span>Gambar</span></div>
-                            <h4>Judul</h4>
-                        </div>
-                        <div className="card-product">
-                            <div className="image-product"><span>Gambar</span></div>
-                            <h4>Judul</h4>
-                        </div>
-                        <div className="card-product">
-                            <div className="image-product"><span>Gambar</span></div>
-                            <h4>Judul</h4>
-                        </div>
-                        <div className="card-product">
-                            <div className="image-product"><span>Gambar</span></div>
-                            <h4>Judul</h4>
-                        </div>
-                        <div className="card-product">
-                            <div className="image-product"><span>Gambar</span></div>
-                            <h4>Judul</h4>
-                        </div>
-                        <div className="card-product">
-                            <div className="image-product"><span>Gambar</span></div>
-                            <h4>Judul</h4>
-                        </div>
-                        <div className="card-product">
-                            <div className="image-product"><span>Gambar</span></div>
-                            <h4>Judul</h4>
-                        </div>
-                        <div className="card-product">
-                            <div className="image-product"><span>Gambar</span></div>
-                            <h4>Judul</h4>
-                        </div>
-                        <div className="card-product">
-                            <div className="image-product"><span>Gambar</span></div>
-                            <h4>Judul</h4>
-                        </div>
-                        <div className="card-product">
-                            <div className="image-product"><span>Gambar</span></div>
-                            <h4>Judul</h4>
-                        </div>
-                        <div className="card-product">
-                            <div className="image-product"><span>Gambar</span></div>
-                            <h4>Judul</h4>
-                        </div>
-                        <div className="card-product">
-                            <div className="image-product"><span>Gambar</span></div>
-                            <h4>Judul</h4>
-                        </div>
-                        <div className="card-product">
-                            <div className="image-product"><span>Gambar</span></div>
-                            <h4>Judul</h4>
-                        </div>
+                        <Product id="1" />
+                        <Product id="2" />
+                        <Product id="3" />
+                        <Product id="4" />
+                        <Product id="5" />
+                        <Product id="6" />
+                        <Product id="7" />
+                        <Product id="8" />
+                        <Product id="9" />
+                        <Product id="10" />
+                        <Product id="11" />
+                        <Product id="12" />
                     </div>
                 </div>
             </div>
