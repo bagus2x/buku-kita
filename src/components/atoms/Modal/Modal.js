@@ -1,26 +1,27 @@
 import React, { useState } from "react";
 import onClickOutside from "react-onclickoutside";
+import './Modal.css'
+import { IoMdClose } from "react-icons/io";
 
-const Menu = () => {
+function Modal({ children, title, closebutton }) {
   const [isOpen, setIsOpen] = useState(false);
-  const toggle = () => setIsOpen(!isOpen);
+  Modal.handleClickOutside = () => setIsOpen(false);
 
-  Menu.handleClickOutside = () => setIsOpen(false);
-  
-  return (
-    <li className={isOpen ? "m-menu -active" : "m-menu "} onClick={toggle}>
-      <div> Open Menu </div>
-      <ul className="m-menu__list">
-        <li className="m-menu__item">
-          <div className="m-menu__link">Log Out</div>
-        </li>
-      </ul>
-    </li>
-  );
-};
+  return isOpen ? (
+    <div className="modal-box">
+      {title || closebutton ? (
+        <div className="header">
+          {title ? <h4>{title}</h4> : ''}
+          {closebutton ? <span onClick={() => setIsOpen(false)} className="close-btn"><IoMdClose size="20px" /></span> : ''}
+        </div>
+      ) : ''}
+      {children}
+    </div>
+  ) : ''
+}
 
 const clickOutsideConfig = {
-  handleClickOutside: () => Menu.handleClickOutside
-};
+  handleClickOutside: () => Modal.handleClickOutside
+}
 
-export default onClickOutside(Menu, clickOutsideConfig);
+export default onClickOutside(Modal, clickOutsideConfig);
