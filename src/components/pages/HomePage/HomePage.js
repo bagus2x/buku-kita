@@ -2,6 +2,7 @@ import React from 'react';
 import TopNavbar from '../../molecules/TopNavbar/TopNavbar';
 import SideNavbar from '../../molecules/SideNavbar/SideNavbar';
 import './HomePage.css';
+import Button from '../../atoms/Button/Button';
 
 const HomePage = () => {
 
@@ -9,76 +10,68 @@ const HomePage = () => {
         <div className="base">
             <TopNavbar />
             <SideNavbar />
-            <div className="container">
+            <div className="container-main">
                 <div className="content-wrapper">
-                    <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro iure incidunt ex fugit libero assumenda officia qui doloremque. Esse corporis excepturi ea mollitia quibusdam? Nemo ut corrupti commodi pariatur expedita.</div>
-                    <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro iure incidunt ex fugit libero assumenda officia qui doloremque. Esse corporis excepturi ea mollitia quibusdam? Nemo ut corrupti commodi pariatur expedita.</div>
-                    <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro iure incidunt ex fugit libero assumenda officia qui doloremque. Esse corporis excepturi ea mollitia quibusdam? Nemo ut corrupti commodi pariatur expedita.</div>
-                    <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro iure incidunt ex fugit libero assumenda officia qui doloremque. Esse corporis excepturi ea mollitia quibusdam? Nemo ut corrupti commodi pariatur expedita.</div>
-                    <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro iure incidunt ex fugit libero assumenda officia qui doloremque. Esse corporis excepturi ea mollitia quibusdam? Nemo ut corrupti commodi pariatur expedita.</div>
-                    <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro iure incidunt ex fugit libero assumenda officia qui doloremque. Esse corporis excepturi ea mollitia quibusdam? Nemo ut corrupti commodi pariatur expedita.</div>
-                    <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro iure incidunt ex fugit libero assumenda officia qui doloremque. Esse corporis excepturi ea mollitia quibusdam? Nemo ut corrupti commodi pariatur expedita.</div>
-                    <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro iure incidunt ex fugit libero assumenda officia qui doloremque. Esse corporis excepturi ea mollitia quibusdam? Nemo ut corrupti commodi pariatur expedita.</div>
-                    <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro iure incidunt ex fugit libero assumenda officia qui doloremque. Esse corporis excepturi ea mollitia quibusdam? Nemo ut corrupti commodi pariatur expedita.</div>
-                    <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro iure incidunt ex fugit libero assumenda officia qui doloremque. Esse corporis excepturi ea mollitia quibusdam? Nemo ut corrupti commodi pariatur expedita.</div>
-                    <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro iure incidunt ex fugit libero assumenda officia qui doloremque. Esse corporis excepturi ea mollitia quibusdam? Nemo ut corrupti commodi pariatur expedita.</div>
-                    <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro iure incidunt ex fugit libero assumenda officia qui doloremque. Esse corporis excepturi ea mollitia quibusdam? Nemo ut corrupti commodi pariatur expedita.</div>
-                    <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro iure incidunt ex fugit libero assumenda officia qui doloremque. Esse corporis excepturi ea mollitia quibusdam? Nemo ut corrupti commodi pariatur expedita.</div>
-                    <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro iure incidunt ex fugit libero assumenda officia qui doloremque. Esse corporis excepturi ea mollitia quibusdam? Nemo ut corrupti commodi pariatur expedita.</div>
-                    <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro iure incidunt ex fugit libero assumenda officia qui doloremque. Esse corporis excepturi ea mollitia quibusdam? Nemo ut corrupti commodi pariatur expedita.</div>
-                    <div>Lorem ipsum dolor,Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem assumenda reprehenderit quo veritatis temporibus in, voluptates et quidem, facere atque asperiores excepturi totam ducimus impedit enim nam unde. Doloribus, maxime. sit amet consectetur adipisicing elit. Porro iure incidunt ex fugit libero assumenda officia qui doloremque. Esse corporis excepturi ea mollitia quibusdam? Nemo ut corrupti commodi pariatur expedita.</div>
-                    <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro iure incidunt ex fugit libero assumenda officia qui doloremque. Esse corporis excepturi ea mollitia quibusdam? Nemo ut corrupti commodi pariatur expedita.</div>
-                    <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro iure incidunt ex fugit libero assumenda officia qui doloremque. Esse corporis excepturi ea mollitia quibusdam? Nemo ut corrupti commodi pariatur expedita.</div>
-                    <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro iure incidunt ex fugit libero assumenda officia qui doloremque. Esse corporis excepturi ea mollitia quibusdam? Nemo ut corrupti commodi pariatur expedita.</div>
-                    <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro iure incidunt ex fugit libero assumenda officia qui doloremque. Esse corporis excepturi ea mollitia quibusdam? Nemo ut corrupti commodi pariatur expedita.</div>
-                    <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro iure incidunt ex fugit libero assumenda officia qui doloremque. Esse corporis excepturi ea mollitia quibusdam? Nemo ut corrupti commodi pariatur expedita.</div>
-                    <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro iure incidunt ex fugit libero assumenda officia qui doloremque. Esse corporis excepturi ea mollitia quibusdam? Nemo ut corrupti commodi pariatur expedita.</div>
-                    <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro iure incidunt ex fugit libero assumenda officia qui doloremque. Esse corporis excepturi ea mollitia quibusdam? Nemo ut corrupti commodi pariatur expedita.</div>
-                    <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro iure incidunt ex fugit libero assumenda officia qui doloremque. Esse corporis excepturi ea mollitia quibusdam? Nemo ut corrupti commodi pariatur expedita.</div>
-                    <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro iure incidunt ex fugit libero assumenda officia qui doloremque. Esse corporis excepturi ea mollitia quibusdam? Nemo ut corrupti commodi pariatur expedita.</div>
-                    <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro iure incidunt ex fugit libero assumenda officia qui doloremque. Esse corporis excepturi ea mollitia quibusdam? Nemo ut corrupti commodi pariatur expedita.</div>
-                    <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro iure incidunt ex fugit libero assumenda officia qui doloremque. Esse corporis excepturi ea mollitia quibusdam? Nemo ut corrupti commodi pariatur expedita.</div>
-                    <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro iure incidunt ex fugit libero assumenda officia qui doloremque. Esse corporis excepturi ea mollitia quibusdam? Nemo ut corrupti commodi pariatur expedita.</div>
-                    <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro iure incidunt ex fugit libero assumenda officia qui doloremque. Esse corporis excepturi ea mollitia quibusdam? Nemo ut corrupti commodi pariatur expedita.</div>
-                    <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro iure incidunt ex fugit libero assumenda officia qui doloremque. Esse corporis excepturi ea mollitia quibusdam? Nemo ut corrupti commodi pariatur expedita.</div>
-                    <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro iure incidunt ex fugit libero assumenda officia qui doloremque. Esse corporis excepturi ea mollitia quibusdam? Nemo ut corrupti commodi pariatur expedita.</div>
-                    <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro iure incidunt ex fugit libero assumenda officia qui doloremque. Esse corporis excepturi ea mollitia quibusdam? Nemo ut corrupti commodi pariatur expedita.</div>
-                    <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro iure incidunt ex fugit libero assumenda officia qui doloremque. Esse corporis excepturi ea mollitia quibusdam? Nemo ut corrupti commodi pariatur expedita.</div>
-                    <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro iure incidunt ex fugit libero assumenda officia qui doloremque. Esse corporis excepturi ea mollitia quibusdam? Nemo ut corrupti commodi pariatur expedita.</div>
-                    <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro iure incidunt ex fugit libero assumenda officia qui doloremque. Esse corporis excepturi ea mollitia quibusdam? Nemo ut corrupti commodi pariatur expedita.</div>
-                    <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro iure incidunt ex fugit libero assumenda officia qui doloremque. Esse corporis excepturi ea mollitia quibusdam? Nemo ut corrupti commodi pariatur expedita.</div>
-                    <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro iure incidunt ex fugit libero assumenda officia qui doloremque. Esse corporis excepturi ea mollitia quibusdam? Nemo ut corrupti commodi pariatur expedita.</div>
-                    <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro iure incidunt ex fugit libero assumenda officia qui doloremque. Esse corporis excepturi ea mollitia quibusdam? Nemo ut corrupti commodi pariatur expedita.</div>
-                    <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro iure incidunt ex fugit libero assumenda officia qui doloremque. Esse corporis excepturi ea mollitia quibusdam? Nemo ut corrupti commodi pariatur expedita.</div>
-                    <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro iure incidunt ex fugit libero assumenda officia qui doloremque. Esse corporis excepturi ea mollitia quibusdam? Nemo ut corrupti commodi pariatur expedita.</div>
-                    <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro iure incidunt ex fugit libero assumenda officia qui doloremque. Esse corporis excepturi ea mollitia quibusdam? Nemo ut corrupti commodi pariatur expedita.</div>
-                    <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro iure incidunt ex fugit libero assumenda officia qui doloremque. Esse corporis excepturi ea mollitia quibusdam? Nemo ut corrupti commodi pariatur expedita.</div>
-                    <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro iure incidunt ex fugit libero assumenda officia qui doloremque. Esse corporis excepturi ea mollitia quibusdam? Nemo ut corrupti commodi pariatur expedita.</div>
-                    <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro iure incidunt ex fugit libero assumenda officia qui doloremque. Esse corporis excepturi ea mollitia quibusdam? Nemo ut corrupti commodi pariatur expedita.</div>
-                    <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro iure incidunt ex fugit libero assumenda officia qui doloremque. Esse corporis excepturi ea mollitia quibusdam? Nemo ut corrupti commodi pariatur expedita.</div>
-                    <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro iure incidunt ex fugit libero assumenda officia qui doloremque. Esse corporis excepturi ea mollitia quibusdam? Nemo ut corrupti commodi pariatur expedita.</div>
-                    <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro iure incidunt ex fugit libero assumenda officia qui doloremque. Esse corporis excepturi ea mollitia quibusdam? Nemo ut corrupti commodi pariatur expedita.</div>
-                    <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro iure incidunt ex fugit libero assumenda officia qui doloremque. Esse corporis excepturi ea mollitia quibusdam? Nemo ut corrupti commodi pariatur expedita.</div>
-                    <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro iure incidunt ex fugit libero assumenda officia qui doloremque. Esse corporis excepturi ea mollitia quibusdam? Nemo ut corrupti commodi pariatur expedita.</div>
-                    <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro iure incidunt ex fugit libero assumenda officia qui doloremque. Esse corporis excepturi ea mollitia quibusdam? Nemo ut corrupti commodi pariatur expedita.</div>
-                    <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro iure incidunt ex fugit libero assumenda officia qui doloremque. Esse corporis excepturi ea mollitia quibusdam? Nemo ut corrupti commodi pariatur expedita.</div>
-                    <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro iure incidunt ex fugit libero assumenda officia qui doloremque. Esse corporis excepturi ea mollitia quibusdam? Nemo ut corrupti commodi pariatur expedita.</div>
-                    <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro iure incidunt ex fugit libero assumenda officia qui doloremque. Esse corporis excepturi ea mollitia quibusdam? Nemo ut corrupti commodi pariatur expedita.</div>
-                    <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro iure incidunt ex fugit libero assumenda officia qui doloremque. Esse corporis excepturi ea mollitia quibusdam? Nemo ut corrupti commodi pariatur expedita.</div>
-                    <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro iure incidunt ex fugit libero assumenda officia qui doloremque. Esse corporis excepturi ea mollitia quibusdam? Nemo ut corrupti commodi pariatur expedita.</div>
-                    <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro iure incidunt ex fugit libero assumenda officia qui doloremque. Esse corporis excepturi ea mollitia quibusdam? Nemo ut corrupti commodi pariatur expedita.</div>
-                    <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro iure incidunt ex fugit libero assumenda officia qui doloremque. Esse corporis excepturi ea mollitia quibusdam? Nemo ut corrupti commodi pariatur expedita.</div>
-                    <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro iure incidunt ex fugit libero assumenda officia qui doloremque. Esse corporis excepturi ea mollitia quibusdam? Nemo ut corrupti commodi pariatur expedita.</div>
-                    <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro iure incidunt ex fugit libero assumenda officia qui doloremque. Esse corporis excepturi ea mollitia quibusdam? Nemo ut corrupti commodi pariatur expedita.</div>
-                    <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro iure incidunt ex fugit libero assumenda officia qui doloremque. Esse corporis excepturi ea mollitia quibusdam? Nemo ut corrupti commodi pariatur expedita.</div>
-                    <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro iure incidunt ex fugit libero assumenda officia qui doloremque. Esse corporis excepturi ea mollitia quibusdam? Nemo ut corrupti commodi pariatur expedita.</div>
-                    <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro iure incidunt ex fugit libero assumenda officia qui doloremque. Esse corporis excepturi ea mollitia quibusdam? Nemo ut corrupti commodi pariatur expedita.</div>
-                    <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro iure incidunt ex fugit libero assumenda officia qui doloremque. Esse corporis excepturi ea mollitia quibusdam? Nemo ut corrupti commodi pariatur expedita.</div>
-                    <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro iure incidunt ex fugit libero assumenda officia qui doloremque. Esse corporis excepturi ea mollitia quibusdam? Nemo ut corrupti commodi pariatur expedita.</div>
-                    <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro iure incidunt ex fugit libero assumenda officia qui doloremque. Esse corporis excepturi ea mollitia quibusdam? Nemo ut corrupti commodi pariatur expedita.</div>
-                    <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro iure incidunt ex fugit libero assumenda officia qui doloremque. Esse corporis excepturi ea mollitia quibusdam? Nemo ut corrupti commodi pariatur expedita.</div>
-                    <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro iure incidunt ex fugit libero assumenda officia qui doloremque. Esse corporis excepturi ea mollitia quibusdam? Nemo ut corrupti commodi pariatur expedita.</div>
-                    <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro iure incidunt ex fugit libero assumenda officia qui doloremque. Esse corporis excepturi ea mollitia quibusdam? Nemo ut corrupti commodi pariatur expedita.</div>
+                    <div className="banner-main">
+                        <h1>Grand Opening!!!</h1>
+                        <p>Ikutii event dan dapatkan hadiah hingga 2000 Iphone 12 secara gratis</p>
+                        <Button variant="default">Gabung Sekarang</Button>
+                    </div>
+                    <h4 style={{ margin: '20px 0 -15px 0' }}>Rekomendasi</h4>
+                    <div className="container-product">
+                        <div className="card-product">
+                            <div className="image-product"><span>Gambar</span></div>
+                            <h4>Judul</h4>
+                        </div>
+                        <div className="card-product">
+                            <div className="image-product"><span>Gambar</span></div>
+                            <h4>Judul</h4>
+                        </div>
+                        <div className="card-product">
+                            <div className="image-product"><span>Gambar</span></div>
+                            <h4>Judul</h4>
+                        </div>
+                        <div className="card-product">
+                            <div className="image-product"><span>Gambar</span></div>
+                            <h4>Judul</h4>
+                        </div>
+                        <div className="card-product">
+                            <div className="image-product"><span>Gambar</span></div>
+                            <h4>Judul</h4>
+                        </div>
+                        <div className="card-product">
+                            <div className="image-product"><span>Gambar</span></div>
+                            <h4>Judul</h4>
+                        </div>
+                        <div className="card-product">
+                            <div className="image-product"><span>Gambar</span></div>
+                            <h4>Judul</h4>
+                        </div>
+                        <div className="card-product">
+                            <div className="image-product"><span>Gambar</span></div>
+                            <h4>Judul</h4>
+                        </div>
+                        <div className="card-product">
+                            <div className="image-product"><span>Gambar</span></div>
+                            <h4>Judul</h4>
+                        </div>
+                        <div className="card-product">
+                            <div className="image-product"><span>Gambar</span></div>
+                            <h4>Judul</h4>
+                        </div>
+                        <div className="card-product">
+                            <div className="image-product"><span>Gambar</span></div>
+                            CARD
+                        </div>
+                        <div className="card-product">
+                            <div className="image-product"><span>Gambar</span></div>
+                            CARD
+                        </div>
+                        <div className="card-product">
+                            <div className="image-product"><span>Gambar</span></div>
+                            CARD
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
