@@ -35,7 +35,7 @@ const RegisterPage = () => {
     const _onSubmit = (e) => {
         e.preventDefault();
         // contoh penggunaan alert, nanti akan di-replace dengan respon dari server // bagus2x 23:51 pm
-        if (formValue.username.length < 4) setformStatus({ username: 'Use 8 characters or more for your username' })
+        if (formValue.username.length < 4) setformStatus({ username: 'Gunakan 8 karakter sampai dengan 20 karakter' })
     }
 
     return (
@@ -47,11 +47,12 @@ const RegisterPage = () => {
                             <IconContext.Provider value={{ size: '30px' }}><MdArrowBack style={{ fill: 'var(--text-primary)' }} /></IconContext.Provider>
                         </Button>
                     ) : null}
-                    {page === 0 ? <h1>Create your account</h1> : ''}
+                    {page === 0 ? <h1>Buat akun di Buku Kita</h1> : ''}
                 </div>
                 <Steps formStatus={formStatus} getFormValue={getFormValue} step={page} />
                 <Button onClick={page !== 2 ? handleNext : _onSubmit} variant="primary">{page !== 2 ? 'Selanjutnya' : 'Daftar'}</Button>
                 <img className="logo" src={Logo} alt="Buku Kita" width="35" />
+                <span className="index">{page + 1} / 3</span>
             </form>
         </div>
     )

@@ -61,3 +61,8 @@
 #register-page .form-group .input-wrapper {
     height: 75px;
 }
+#register-page .index{
+    position: absolute;
+    right: 20px;
+    top: 30px;
+}
