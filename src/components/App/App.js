@@ -7,6 +7,7 @@ import Base from '../pages/Base/Base';
 import Payment from '../pages/PaymentPage/Payment';
 import './App.css';
 import E404 from '../pages/404/404';
+import SettingsPage from '../pages/SettingsPage/SettingsPage';
 
 const App = () => {
     return (
@@ -23,6 +24,9 @@ const App = () => {
                 </Route>
                 <Route path="/register">
                     <RegisterPage />
+                </Route>
+                <Route path="/account">
+                    <SettingsPage />
                 </Route>
                 <Route path="/" exact>
                     <LandingPage />
