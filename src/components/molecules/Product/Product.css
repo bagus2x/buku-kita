@@ -11,9 +11,13 @@
 }
 .card-product a{
     border-radius: 5px 5px 0 0;
-    height: 180px;
     width: 100%;
     background-color: #eee;
+}
+.card-product .image-product {
+    border-radius: 5px 5px 0 0;
+    background-color: var(--default-main);
+    min-height: 150px;
 }
 .card-product h4 {
     margin: 10px 5px;
@@ -87,6 +91,72 @@
     cursor: pointer;
     background-color: var(--default-light);
 }
+.modal-box .box-wrapper {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 5fr;
+}
+.modal-box .image-product-detail {
+    flex: 1;
+    position: relative;
+    text-align: center;
+}
+.modal-box .icon-bookmark {
+    cursor: pointer;
+    position: absolute;
+    top: -5px;
+    right: 0;
+}
+.modal-box .icon-bookmark:hover svg, .modal-box .icon-bookmark:active svg {
+    fill: var(--text-primary);
+}
+.modal-box .icon-bookmark svg {
+    fill: var(--text-secondary);
+}
+.modal-box .image-product-detail .image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    width: 100px;
+    height: 120px;
+    background-color: var(--default-main);
+}
+.modal-box .image-product-detail a {
+    text-decoration: none;
+    font-size: .75rem;
+}
+.modal-box .detail-product {
+    flex: 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.modal-box .detail-product .group-star svg {
+    fill: var(--warning-main);
+}
+.modal-box .detail-product h1 {
+    color: var(--text-primary);
+}
+.modal-box hr {
+    margin-top: 5px;
+}
+.modal-box .detail-product .description{
+    margin-bottom: 10px;
+}
+.modal-box .detail-product td {
+    padding-right: 20px;
+    font-size: .75rem;
+    color: var(--text-secondary);
+}
+.modal-box button svg{
+    fill: var(--pure-white);
+}
+.modal-box .cart {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
 @media screen and (max-width: 768px) {
 
 }
@@ -95,5 +165,11 @@
         max-width: 90%;
         height: 400px;
         padding: 0 10px;
+    }
+    .modal-box .detail-product .description {
+        font-size: .8rem;
+    }
+    .modal-box .detail-product td {
+        font-size: .7rem;
     }
 }
