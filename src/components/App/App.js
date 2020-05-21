@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 import LandingPage from '../pages/LandingPage/LandingPage';
 import Components from '../pages/Components/Components';
 import RegisterPage from '../pages/RegisterPage/RegisterPage';
@@ -7,6 +7,7 @@ import LoginPage from '../pages/LoginPage/LoginPage';
 import Base from '../pages/Base/Base';
 import Payment from '../pages/PaymentPage/Payment';
 import './App.css';
+import E404 from '../pages/404/404';
 
 const App = () => {
     return (
@@ -30,6 +31,10 @@ const App = () => {
                 <Route path="/" exact>
                     <LandingPage />
                 </Route>
+                <Route to="/404">
+                    <E404 />
+                </Route>
+                <Redirect to="/404" />
             </Switch>
         </Router>
     )
