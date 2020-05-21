@@ -5,8 +5,9 @@ import Steps from './Steps';
 import Button from '../../atoms/Button/Button';
 import Logo from '../../../assets/img/main_logo.svg';
 import './RegisterPage.css';
+import { withRouter } from 'react-router';
 
-const RegisterPage = () => {
+const RegisterPage = (props) => {
 
     let initialFormStatus = {
         username: '',
@@ -35,7 +36,8 @@ const RegisterPage = () => {
     const _onSubmit = (e) => {
         e.preventDefault();
         // contoh penggunaan alert, nanti akan di-replace dengan respon dari server // bagus2x 23:51 pm
-        if (formValue.username.length < 4) setformStatus({ username: 'Gunakan 8 karakter sampai dengan 20 karakter' })
+        if (formValue.username.length < 4) setformStatus({ username: 'Gunakan 8 karakter sampai dengan 20 karakter' });
+        props.history.push('/home');
     }
 
     return (
@@ -58,4 +60,4 @@ const RegisterPage = () => {
     )
 }
 
-export default RegisterPage;
+export default withRouter(RegisterPage);
