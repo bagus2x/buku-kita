@@ -1,9 +1,10 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import TopNavbar from '../../molecules/TopNavbar/TopNavbar';
 import SideNavbar from '../../molecules/SideNavbar/SideNavbar';
 import HomePage from '../HomePage/HomePage';
 import './Base.css';
+import ProfilePage from '../ProfilePage/ProfilePage';
 
 const Base = () => {
 
@@ -12,16 +13,12 @@ const Base = () => {
             <TopNavbar />
             <SideNavbar />
             <div className="container-main">
-                <Router>
-                    <Switch>
-                        <Route exact path="/home" >
-                            <HomePage />
-                        </Route>
-                        <Route path="/home/profile" >
-                            <h1>hello</h1>
-                        </Route>
-                    </Switch>
-                </Router>
+                <Route exact path="/home" >
+                    <HomePage />
+                </Route>
+                <Route path="/home/profile" >
+                    <ProfilePage />
+                </Route>
             </div>
         </div>
     )
