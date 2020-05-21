@@ -16,9 +16,10 @@ import Menu, { Content } from '../../atoms/Menu/Menu';
 import { useMatchMedia } from '../../utils/utils';
 import SearchBox from './SearchBox';
 import { data } from './dummydata';
+import { withRouter } from 'react-router';
 
 
-const TopNavbar = () => {
+const TopNavbar = (props) => {
     let initialWidth = document.documentElement.clientWidth;
     const [width, setWidth] = useState(initialWidth);
     useMatchMedia((size) => setWidth(size));
@@ -33,6 +34,10 @@ const TopNavbar = () => {
             </span>
         </Item>
     );
+
+    const handleLogout = () => {
+        props.history.push('/');
+    }
 
     return (
         <div id="top-navbar">
@@ -91,15 +96,15 @@ const TopNavbar = () => {
                                     </span>
                                 </Item>
                                 <hr style={{ width: '100%', border: '1.5px solid var(--divider)', margin: '.5rem' }} />
-                                <Item variant="div rectangle">
+                                <Item to="/home/help" variant="div rectangle">
                                     <span className="item-icon"><IoMdHelpCircle size={24} /></span>
                                     Bantuan
                                 </Item>
-                                <Item variant="div rectangle">
+                                <Item to="/home/setting" variant="div rectangle">
                                     <span className="item-icon"><IoMdSettings size={24} /></span>
                                     Pengaturan
                                 </Item>
-                                <Item variant="div rectangle">
+                                <Item onClick={handleLogout} variant="div rectangle">
                                     <span className="item-icon"><IoMdExit size={24} /></span>
                                     Keluar
                                 </Item>
@@ -118,4 +123,4 @@ const TopNavbar = () => {
     );
 };
 
-export default TopNavbar;
+export default withRouter(TopNavbar);
