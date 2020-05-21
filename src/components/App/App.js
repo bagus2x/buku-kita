@@ -25,9 +25,6 @@ const App = () => {
                 <Route path="/register">
                     <RegisterPage />
                 </Route>
-                <Route path="/components">
-                    <Components />
-                </Route>
                 <Route path="/" exact>
                     <LandingPage />
                 </Route>
