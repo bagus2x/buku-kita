@@ -1,24 +1,11 @@
-.base {
-    display: flex;
-    width: 100vw;
-    max-width: 100%;
-}
-.container-main {
-    flex: 1;
-    margin-left: 80px;
-    min-height: 100vh;
-    box-sizing: border-box;
-    background-color: var(--white);
-}
-.content-wrapper {
+.home-page {
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
     padding: 0 20px;
-    margin-top: 60px;
     box-sizing: border-box;
 }
-.content-wrapper .banner-main {
+.home-page .banner-main {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -28,21 +15,21 @@
     min-height: 120px;
     border-radius: 0 0 10px 10px;
 }
-.content-wrapper .banner-main :nth-child(1) {
+.home-page .banner-main :nth-child(1) {
     font-weight: bold;
     color: var(--pure-white);
 }
-.content-wrapper .banner-main :nth-child(2) {
+.home-page .banner-main :nth-child(2) {
     color: var(--pure-white);
     margin-bottom: 20px;
 }
-.content-wrapper .container-product {
+.home-page .container-product {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-gap: 1rem;
     grid-auto-flow: dense;
 }
-.content-wrapper .title-thumb {
+.home-page .title-thumb {
     margin: 20px 0 10px 0;
     font-weight: bolder;
 }
@@ -51,7 +38,7 @@
     .container-main {
         margin-left: 70px !important;
     }
-    .content-wrapper .container-product {
+    .home-page .container-product {
         padding: 20px 0;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -65,7 +52,7 @@
         margin-left: 0 !important;
         margin-bottom: 70px;
     }
-    .content-wrapper {
+    .home-page {
         margin-top: 50px;
     }
 }

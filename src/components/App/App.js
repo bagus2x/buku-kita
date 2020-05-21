@@ -4,15 +4,15 @@ import LandingPage from '../pages/LandingPage/LandingPage';
 import Components from '../pages/Components/Components';
 import RegisterPage from '../pages/RegisterPage/RegisterPage';
 import LoginPage from '../pages/LoginPage/LoginPage';
-import HomePage from '../pages/HomePage/HomePage';
 import './App.css';
+import Base from '../pages/Base/Base';
 
 const App = () => {
     return (
         <Router>
             <Switch>
                 <Route path="/home">
-                    <HomePage />
+                    <Base />
                 </Route>
                 <Route path="/login">
                     <LoginPage />
