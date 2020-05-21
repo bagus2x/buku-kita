@@ -1,7 +1,7 @@
 import React from 'react';
 import './Product.css';
 import { useState } from 'react';
-import { IoMdClose, IoMdStar, IoMdImage, IoMdCart, IoMdBookmark, IoMdStarHalf } from 'react-icons/io';
+import { IoMdClose, IoMdStar, IoMdImage, IoMdBookmark, IoMdStarHalf, IoIosCart } from 'react-icons/io';
 import { Link } from 'react-router-dom';
 import Button from '../../atoms/Button/Button';
 
@@ -30,7 +30,7 @@ const Product = () => {
                                     <Link to="#">Lebih detail</Link>
                                 </div>
                                 <div className="detail-product">
-                                    <h1>Database Redist Pemula</h1>
+                                    <h1>Database Redis Pemula</h1>
                                     <span className="group-star"><IoMdStar /><IoMdStar /><IoMdStar /><IoMdStar /><IoMdStarHalf /></span>
                                     <hr />
                                     <p className="description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam, totam.
@@ -52,7 +52,7 @@ const Product = () => {
                                         </tbody>
                                     </table>
                                 </div>
-                                <Button className="cart" variant="primary"><IoMdCart /></Button>
+                                <Button className="cart" variant="primary"><IoIosCart size={24} /></Button>
                             </div>
                         </div>
                     </div>
