@@ -58,7 +58,7 @@ const TopNavbar = (props) => {
                         <Content>
                             <List>
                                 <h4 className="title-menu">Ditambahkan</h4>
-                                <Item sp="1" variant="div rectangle" className="book-cart">
+                                <Item to="/payment" sp="1" variant="div rectangle" className="book-cart">
                                     <img src="https://cdn.waterstones.com/bookjackets/large/9780/2413/9780241361979.jpg" alt="" />
                                     <h4 className="product-name">Product Name</h4>
                                     <div className="library">Diambil sebelum pukul 4:05 pm di Perpustakaan Kota Malang</div>
@@ -111,7 +111,7 @@ const TopNavbar = (props) => {
                             </List>
                         </Content>
                     </Menu>
-                    <Item variant="button rectangle" className="avatar-wrapper">
+                    <Item to="/home/profile" variant="button rectangle" className="avatar-wrapper">
                         <span className="avatar">
                             <img src={Avatar} width="24px" alt="Profile" />
                         </span>
