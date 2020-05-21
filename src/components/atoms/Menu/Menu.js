@@ -21,16 +21,13 @@ function Menu(props) {
     Menu['handleClickOutside_' + id] = () => setOpen(false);
     Menu._onSelect = () => setOpen(false);
 
-    const handleClickItems = () => {
-
+    useEffect(() => {
         if (contentRef.current) {
             [].slice.call(contentRef.current.children).forEach((e) => {
                 e.addEventListener('click', () => setTimeout(() => setOpen(false), delay ? delay : 200))
             });
         }
-    }
-
-    useEffect(() => { if (contentRef.current) return handleClickItems() });
+    }, [delay]);
 
     return (
         <div className={`menu${className ? ' ' + className : ''}`}>
