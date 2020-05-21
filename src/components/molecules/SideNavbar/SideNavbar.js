@@ -5,11 +5,14 @@ import { useState } from 'react';
 import { GoHome, GoChecklist, GoBookmark, GoHistory } from 'react-icons/go';
 import './SideNavbar.css';
 import { useMatchMedia } from '../../utils/utils';
+import { useLocation } from 'react-router';
 
 const SideNavbar = () => {
     let initialWidth = document.documentElement.clientWidth;
     const [navbarMax, setNavbarMax] = useState(false);
     const [width, setWidth] = useState(initialWidth);
+    let loc = useLocation()
+
     useMatchMedia((size) => setWidth(size));
 
     let icon = {
@@ -26,10 +29,10 @@ const SideNavbar = () => {
         <div className={`side-navbar ${navbarMax ? 'maximize' : 'minimize'}`}>
             <List>
                 {width > 576 ? <Item onClick={() => setNavbarMax(!navbarMax)} className="btn-arrow" effect variant="div circle">{icon.arrow}</Item> : ''}
-                <Item className="active" variant="div rectangle">{icon.home}{title('Beranda')}</Item>
-                <Item to="/user/collections" variant="div rectangle">{icon.collections}{title('Koleksi')}</Item>
-                <Item to="/user/bookmark" variant="div rectangle">{icon.bookmark}{title('Ditandai')}</Item>
-                <Item to="/user/history" variant="div rectangle">{icon.history}{title('Riwayat')}</Item>
+                <Item className={loc.pathname === '/home' ? 'active' : ''} to="/home" variant="div rectangle">{icon.home}{title('Beranda')}</Item>
+                <Item className={loc.pathname === '/home/profile/collection' ? 'active' : ''} to="/home/profile/collection" variant="div rectangle">{icon.collections}{title('Koleksi')}</Item>
+                <Item className={loc.pathname === '/home/profile/bookmark' ? 'active' : ''} to="/home/profile/bookmark" variant="div rectangle">{icon.bookmark}{title('Ditandai')}</Item>
+                <Item className={loc.pathname === '/home/profile/history' ? 'active' : ''} to="/home/profile/history" variant="div rectangle">{icon.history}{title('Riwayat')}</Item>
             </List>
         </div>
     )
