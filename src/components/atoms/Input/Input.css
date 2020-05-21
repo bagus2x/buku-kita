@@ -6,7 +6,6 @@
 }
 .inp {
     width: 100%;
-    transition: border-bottom-color 1s ease;
     position: relative;
 }
 .inp:invalid{
@@ -14,7 +13,7 @@
 }
 .input-wrapper label{
     font-size: 0.75rem;
-    transition: font-size 0.5s ease;
+    transition: font-size 0.3s ease;
     font-weight: 500;
 }
 .input-wrapper:focus-within label {
@@ -61,12 +60,4 @@
 }
 .inp.line:focus + .alert.form {
     margin-top: 0px;
-}
-@-webkit-keyframes fadeIn {
-    from { opacity: 0; }
-      to { opacity: 1; }
-}
-@keyframes fadeIn {
-    from { opacity: 0; }
-      to { opacity: 1; }
 }
