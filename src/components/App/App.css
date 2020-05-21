@@ -63,5 +63,12 @@ hr {
 img {
     pointer-events: none;
 }
+a {
+    color: var(--info-main);
+    text-decoration: none;
+}
+a:hover {
+    color: var(--info-dark);
+}
 :focus {outline:none;}
 ::-moz-focus-inner {border:0;}
