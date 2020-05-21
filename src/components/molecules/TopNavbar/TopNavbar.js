@@ -61,7 +61,7 @@ const TopNavbar = (props) => {
                                 <Item to="/payment" sp="1" variant="div rectangle" className="book-cart">
                                     <img src="https://cdn.waterstones.com/bookjackets/large/9780/2413/9780241361979.jpg" alt="" />
                                     <h4 className="product-name">Product Name</h4>
-                                    <div className="library">Diambil sebelum pukul 4:05 pm di Perpustakaan Kota Malang</div>
+                                    <div className="library">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti, neque.</div>
                                     <div className="price">Rp.0</div>
                                     <div className="delete">Hapus</div>
                                 </Item>
@@ -100,7 +100,7 @@ const TopNavbar = (props) => {
                                     <span className="item-icon"><IoMdHelpCircle size={24} /></span>
                                     Bantuan
                                 </Item>
-                                <Item to="/home/setting" variant="div rectangle">
+                                <Item to="/account" variant="div rectangle">
                                     <span className="item-icon"><IoMdSettings size={24} /></span>
                                     Pengaturan
                                 </Item>
