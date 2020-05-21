@@ -6,12 +6,15 @@ import { GoHome, GoChecklist, GoBookmark, GoHistory } from 'react-icons/go';
 import './SideNavbar.css';
 import { useMatchMedia } from '../../utils/utils';
 import { useLocation } from 'react-router';
+import onClickOutside from 'react-onclickoutside';
 
-const SideNavbar = () => {
+function SideNavbar(props) {
     let initialWidth = document.documentElement.clientWidth;
     const [navbarMax, setNavbarMax] = useState(false);
     const [width, setWidth] = useState(initialWidth);
     let loc = useLocation()
+
+    SideNavbar['handleClickOutside_' + props.id] = () => setNavbarMax(false);
 
     useMatchMedia((size) => setWidth(size));
 
@@ -38,4 +41,8 @@ const SideNavbar = () => {
     )
 }
 
-export default SideNavbar;
+const clickOutsideConfig = {
+    handleClickOutside: ({ props }) => SideNavbar['handleClickOutside_' + props.id],
+};
+
+export default onClickOutside(SideNavbar, clickOutsideConfig);
