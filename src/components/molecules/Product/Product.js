@@ -11,7 +11,7 @@ const Product = () => {
     return (
         <div>
             <div onClick={() => setOpen(!open)} className="card-product">
-                <Link to="#"><div className="image-product"><span>Gambar</span></div></Link>
+                <Link to="#"><div className="image-product"><IoMdImage size="50px" /></div></Link>
                 <h4>Judul</h4>
             </div>
             {

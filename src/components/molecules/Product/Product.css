@@ -18,6 +18,12 @@
     border-radius: 5px 5px 0 0;
     background-color: var(--default-main);
     min-height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-product .image-product svg {
+    fill: var(--default-dark);
 }
 .card-product h4 {
     margin: 10px 5px;
