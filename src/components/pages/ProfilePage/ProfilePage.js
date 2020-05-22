@@ -42,7 +42,33 @@ const ProfilePage = () => {
                     <Tes text="Ditandai" />
                 </Route>
                 <Route path="/home/profile/history" exact>
-                    <Tes text="Riwayat" />
+                    <div className="a-history">
+                        <h1>Riwayat peminjaman</h1>
+                        <h4>Microservice Architecture</h4>
+                        <span>Dikembalikan 1 hari yang lalu</span>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil, minima?</p>
+                        <hr />
+                        <h4>Belajar Database NoSQL</h4>
+                        <span>Dikembalikan 3 hari yang lalu</span>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil, minima?</p>
+                        <hr />
+                        <h4>Flutter untuk Pemula</h4>
+                        <span>Dikembalikan 4 hari yang lalu</span>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil, minima?</p>
+                        <hr />
+                        <h4>Vue & Node stack</h4>
+                        <span>Dikembalikan 7 hari yang lalu</span>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil, minima?</p>
+                        <hr />
+                        <h4>Microservice dengan golang</h4>
+                        <span>Dikembalikan 12 hari yang lalu</span>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil, minima?</p>
+                        <hr />
+                        <h4>Cerita Nabi</h4>
+                        <span className="late">Waktu peminjaman berakhir 30 hari yang lalu</span>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil, minima?</p>
+                        <hr />
+                    </div>
                 </Route>
             </div>
         </div>
