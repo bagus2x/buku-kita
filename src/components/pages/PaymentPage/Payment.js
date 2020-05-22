@@ -2,9 +2,10 @@ import React from 'react';
 import './Payment.css';
 import Input, { Label } from '../../atoms/Input/Input';
 import Button from '../../atoms/Button/Button';
+import { IoMdImage } from 'react-icons/io';
+import { withRouter } from 'react-router';
 
-const Payment = () => {
-
+const Payment = (props) => {
     return (
         <div className="payment-page">
             <div className="cont">
@@ -31,12 +32,12 @@ const Payment = () => {
                         </div>
                     </div>
                     <div className="detail-product">
-                        <div className="image-product">gambar</div>
+                        <div className="image-product"><IoMdImage size="50px" /></div>
                         <h4>Perpustakaan Sahaya</h4>
                     </div>
                 </div>
                 <div className="btn-wrapper">
-                    <Button variant="danger">Batal</Button>
+                    <Button onClick={props.history.goBack} variant="danger">Batal</Button>
                     <Button variant="primary">Pinjam</Button>
                 </div>
             </div>
@@ -45,4 +46,4 @@ const Payment = () => {
 }
 
 
-export default Payment;
+export default withRouter(Payment);

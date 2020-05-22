@@ -36,6 +36,12 @@
     width: 300px;
     background-color: var(--default-main);
     border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.detail-product .image-product svg {
+    fill: var(--default-dark);
 }
 @media screen and (max-width: 768px) {
     .payment-page .container-payment{
