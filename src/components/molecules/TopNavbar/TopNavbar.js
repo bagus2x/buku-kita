@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import './TopNavbar.css';
 import TopNav from '../../atoms/TopNav/TopNav';
 import {
-    IoMdNotificationsOutline,
     IoMdArrowDropdown,
     IoMdExit,
     IoMdHelpCircle,
     IoMdSettings,
-    BsBookmarkPlus,
+    IoIosCart,
+    IoIosNotifications,
 } from 'react-icons/all';
 import Logo from '../../../assets/img/main_logo.svg';
 import Avatar from '../../../assets/img/avatar.svg';
@@ -53,7 +53,7 @@ const TopNavbar = (props) => {
                 <List className="user-menu">
                     <Menu id="menu3" delay={-1} className="user-container-menu">
                         <Item effect variant="button circle">
-                            <BsBookmarkPlus size={24} />
+                            <IoIosCart size={24} />
                         </Item>
                         <Content>
                             <List>
@@ -70,7 +70,7 @@ const TopNavbar = (props) => {
                     </Menu>
                     <Menu id="menu2" delay={-1} className="user-container-menu user-notif-menu">
                         <Item effect variant="button circle">
-                            <IoMdNotificationsOutline size={24} />
+                            <IoIosNotifications size={24} />
                         </Item>
                         <Content>
                             <List>
