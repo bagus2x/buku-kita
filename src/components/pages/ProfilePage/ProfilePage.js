@@ -7,7 +7,7 @@ import { IoMdHome, IoMdPeople, IoIosLink } from 'react-icons/io';
 import { useMatchMedia } from '../../utils/utils';
 import { Route } from 'react-router';
 
-const ProfilePage = () => {
+const ProfilePage = (props) => {
 
     let initialWidth = document.documentElement.clientWidth;
     const [width, setWidth] = useState(initialWidth);
@@ -18,7 +18,7 @@ const ProfilePage = () => {
             <div className="profile">
                 <img className="profile-photo" src={Avatar} alt="profile" />
                 <div className="description">
-                    <h1>Node Subejo</h1>
+                    <h1>{props.username}</h1>
                     <h3>node_subejo</h3>
                     {width > 768 ? <Button variant="default">Edit profile</Button> : ''}
                     <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, quas?</span>

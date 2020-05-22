@@ -7,14 +7,18 @@ import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import './LoginPage.css';
 
 const LoginPage = (props) => {
-
     const [showPassword, setShowPassword] = useState(false);
-
+    const [userName, setUserName] = useState('')
     const toggleInputType = () => setShowPassword(!showPassword);
+    // Hanya demo saja
+    const handleInputChange = (e) => setUserName(e.target.value);
 
     const handleLogin = (e) => {
         e.preventDefault();
-        props.history.push('/home');
+        if (userName) {
+            localStorage.setItem('username', userName);
+            props.history.push('/home');
+        }
     }
 
     return (
@@ -22,8 +26,8 @@ const LoginPage = (props) => {
             <img src={Logo} alt="Buku Kita" width="35" />
             <h1>Login to Buku Kita</h1>
             <form className="form-group">
-                <Label id="username" title="Email" >
-                    <Input variant="line" />
+                <Label id="username" title="Nama pengguna" >
+                    <Input onChange={handleInputChange} variant="line" />
                 </Label>
                 <Label id="password" title="Password" >
                     <Input type={showPassword ? 'text' : 'password'} variant="line" />

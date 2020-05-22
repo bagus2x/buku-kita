@@ -18,7 +18,6 @@ import SearchBox from './SearchBox';
 import { data } from './dummydata';
 import { withRouter } from 'react-router';
 
-
 const TopNavbar = (props) => {
     let initialWidth = document.documentElement.clientWidth;
     const [width, setWidth] = useState(initialWidth);
@@ -86,12 +85,12 @@ const TopNavbar = (props) => {
                         </Item>
                         <Content className="profile-menu">
                             <List>
-                                <Item variant="div rectangle">
+                                <Item to="/home/profile" variant="div rectangle">
                                     <span className="avatar">
                                         <img src={Avatar} width="30px" alt="Profile" />
                                     </span>
                                     <span>
-                                        <h4 style={{ marginBottom: '4px' }}>Username</h4>
+                                        <h4 style={{ marginBottom: '4px' }}>{props.username}</h4>
                                         <h5 style={{ color: 'var(--default-dark)', fontWeight: '400' }}>Lihat profil anda</h5>
                                     </span>
                                 </Item>
@@ -115,7 +114,7 @@ const TopNavbar = (props) => {
                         <span className="avatar">
                             <img src={Avatar} width="24px" alt="Profile" />
                         </span>
-                        Profile
+                        {props.username}
                     </Item>
                 </List>
             </TopNav>
