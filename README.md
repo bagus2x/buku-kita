@@ -1,13 +1,9 @@
 # Buku Kita 
 
-This is 'Buku Kita' app using ReactJS
-
 ### Preview 
 
 [Buku Kita](https://bukukita.netlify.app/)
-```sh
-WIP 15%
-```
+
 
 
 
@@ -21,4 +17,4 @@ $ npm install
 $ npm start
 # Visit http://localhost:3000
 ```
-### Authors
+
